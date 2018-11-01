@@ -13,8 +13,6 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.mysql.fabric.xmlrpc.base.Data;
-
 import cn.edu.cqupt.core.UUIDFactory;
 import cn.edu.cqupt.dao.InteresttableMapper;
 import cn.edu.cqupt.dao.LoanApprovalInfoMapper;

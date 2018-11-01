@@ -73,13 +73,14 @@ public class HomeService implements cn.edu.cqupt.service.HomeService {
 
 	
 	
-
+/**
+ * 用户登录
+ */
 	public HashMap<String, Object> selectLoginuser(String username, String password) throws Exception {
 		Loginuser user=loginuserMapper.isHaveUser(username);
 		if (user==null){
 			throw new Exception("该用户不存在");
 		}
-		
 		String status=user.getStatus().toLowerCase();
 		if (!JobsConstants.LOGIN_USER_STATUS_NORMAL.equals(status)) {
 			switch (status) {

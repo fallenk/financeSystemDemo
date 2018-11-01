@@ -29,7 +29,6 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
-import com.mysql.jdbc.Util;
 import com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
 
 import cn.edu.cqupt.core.UUIDFactory;
@@ -119,7 +118,9 @@ public class HomeControllerCb extends BaseController{
 	else {
 		HashMap<String, Object> loginuser = null;
 		try {
+
 			loginuser=homeService.selectLoginuser(username,password);
+			System.out.println("loginuser=");
 			Loginuser user=null;
 			Userinfo uinfo=null;
 			if(loginuser!=null){

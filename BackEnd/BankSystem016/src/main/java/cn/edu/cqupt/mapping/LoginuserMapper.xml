@@ -47,7 +47,7 @@
   <select id="isHaveUser" resultMap="BaseResultMap" parameterType="java.lang.String" >
     select 
     <include refid="Base_Column_List" />
-    from Loginuser
+    from loginuser
     where loginName= #{username,jdbcType=VARCHAR}
   </select>
   <delete id="deleteByPrimaryKey" parameterType="java.lang.String" >
