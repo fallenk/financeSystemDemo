@@ -106,7 +106,7 @@ h1.logo-h1 {
 	width: 780px;
 	height: 400px;
 	margin: 30px auto;
-	border: 1px solid #666;
+	border: 1px solid #0080ff;
 	border-radius: 5px;
 	box-sizing: border-box;
 }
@@ -119,7 +119,7 @@ h2.title {
 	height: 45px;
 	line-height: 45px;
 	font-size: 22px;
-	color: #000;
+	color: #0080ff;
 }
 
 .storage-form {
@@ -141,6 +141,9 @@ h2.title {
 	width: 204px;
 	height: 30px;
 	margin: 0 0 0 92px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 .storage-label {
 	display: inline-block;
@@ -156,6 +159,9 @@ h2.title {
 	width: 200px;
 	height: 30px;
 	font-size: 12px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 #subBtn {
 	margin: 0 60px 0 95px;

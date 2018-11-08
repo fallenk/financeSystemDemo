@@ -27,8 +27,7 @@ import cn.edu.cqupt.service.ServiceXx;
 import cn.edu.cqupt.service.ServiceYg;
 
 /*
- * 杨刚专用controller
- * 此类用于处理前台请求以及返回结果
+ *  此类用于处理前台请求以及返回结果
  */
 @Controller
 public class ControllerYg extends BaseController{

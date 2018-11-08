@@ -75,9 +75,9 @@ public class ControllerXx extends BaseController {
 									@RequestParam(value="password", required=false, defaultValue="null") String password,
 									@RequestParam(value="idnumber",required=false, defaultValue="null") String idnumber,
 						HttpServletRequest request) throws Exception{
-		System.out.println("name>>>>>>"+name);
-		System.out.println("password>>>>>>>>>>"+password);
-		System.out.println("idnumber>>>>>>>>"+idnumber);
+		System.out.println("name:"+name);
+		System.out.println("password:"+password);
+		System.out.println("idnumber:"+idnumber);
 		
 		ReturnInfo info = new ReturnInfo();
 		HttpSession session = request.getSession();

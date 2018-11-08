@@ -1,7 +1,9 @@
 package cn.edu.cqupt.model;
 
 import java.util.Date;
-
+/*
+ * 登录用户的信息
+ */
 public class Loginuser {
     private String userid;
 

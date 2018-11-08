@@ -102,7 +102,7 @@ h1.logo-h1 {
 .container {
   width: 780px;
   margin: 20px auto;
-  border: 1px solid #000;
+  border: 1px solid #0080ff;
 }
 .container .title {
   font-size: 26px;
@@ -110,9 +110,10 @@ h1.logo-h1 {
   line-height: 50px;
   text-align: center;
   font-weight: bold;
+  color:#0080ff;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #0080ff;
 }
 .container form {
   width: 320px;
@@ -130,6 +131,9 @@ h1.logo-h1 {
   height: 30px;
   float: right;
   margin: 10px 0 0 0;
+  border:2px solid;
+  border-radius:25px;
+  -moz-border-radius:25px;
 }
 input[type="file"] {
   border: 0;

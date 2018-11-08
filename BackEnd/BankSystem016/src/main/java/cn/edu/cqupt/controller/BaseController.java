@@ -1,8 +1,4 @@
-/**
- * 
- */
 package cn.edu.cqupt.controller;
-
 import java.util.Iterator;
 import java.util.Map;
 import java.util.Set;
@@ -18,10 +14,6 @@ import org.springframework.transaction.support.TransactionTemplate;
 import cn.edu.cqupt.core.SqlMapTemplateAware;
 import cn.edu.cqupt.core.TransactionTemlateAware;
 
-/**
- * @author Leo
- *
- */
 public abstract class BaseController implements SqlMapTemplateAware,
 TransactionTemlateAware {
 	static Logger logger = LoggerFactory.getLogger(BaseController.class);
@@ -95,7 +87,7 @@ TransactionTemlateAware {
 				s +=i + "&&"; 
 			}  
 		}  
-		logger.debug("##############-CSJS-###########：" + ";请求的url(带参数):" + request.getRequestURI() + "?" + s);
+		logger.debug("请求的url(带参数):" + request.getRequestURI() + "?" + s);
 	}
 
 }

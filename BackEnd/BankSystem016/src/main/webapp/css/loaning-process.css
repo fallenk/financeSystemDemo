@@ -148,6 +148,7 @@ h1.logo-h1 {
   min-width: 1050px;
   height: 100px;
   background-color: #013564;
+  bottom: 0px;
 }
 .footer-wrap {
   width: 1000px;

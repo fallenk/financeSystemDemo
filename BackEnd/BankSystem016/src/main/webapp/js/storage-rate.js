@@ -1,5 +1,5 @@
 $(function(){
-	alert("hhhh");
+	//alert("hhhh");
 	// 显示当前时间
 	(function time(){
 		var oTime = $(".time-show"),

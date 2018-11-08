@@ -1,3 +1,4 @@
+@@ -0,0 +1,204 @@
 body,html {
 	padding: 0;
 	margin: 0;
@@ -97,19 +98,19 @@ h1.logo-h1 {
 
 /* main */
 .main {
-	width: 100%;
+	width: 540px;
 	min-height: 400px;
 	min-height: calc(100vh - 175px);
 	position: relative;
 }
 
 .container {
-	width: 502px;
+	width: 540px;
 	height: 302px;
 	position: absolute;
-	left: calc(50% - 250px);
-	top: calc(50% - 150px);
-	border: 1px solid #111;
+	left: 330px;
+	top: 100px;
+	border: 1px solid #0080ff;
 	border-radius: 5px;
 }
 h2.account-title {
@@ -120,7 +121,7 @@ h2.account-title {
 	height: 45px;
 	line-height: 45px;
 	font-size: 22px;
-	color: #000;
+	color: #0080ff;
 }
 .account-form {
 	margin: 0 auto;
@@ -147,6 +148,9 @@ h2.account-title {
 	text-indent: 10px;
 	width: 200px;
 	height: 30px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 #subBtn {
 	margin: 0 60px 0 95px;

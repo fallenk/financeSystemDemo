@@ -106,7 +106,7 @@ h1.logo-h1 {
 .container {
 	width: 960px;
 	margin: 30px auto;
-	border: 1px solid #666;
+	border: 1px solid #0080ff;
 	border-radius: 5px;
 	box-sizing: border-box;
 }
@@ -118,7 +118,7 @@ h2.account-title {
 	height: 50px;
 	line-height: 50px;
 	font-size: 30px;
-	color: #000;
+	color: #0080ff;
 	border-bottom: 1px solid #666;
 }
 
@@ -143,9 +143,15 @@ h2.account-title {
 	color: #111;
 	font-size: 12px;
 	text-indent: 10px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 .idNumber {
 	margin: 0 50px 0 50px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 #search {
 	cursor: pointer;

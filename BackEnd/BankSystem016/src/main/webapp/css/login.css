@@ -54,6 +54,7 @@ body {
 .main {
 	width: 100%;
 	flex: 1;
+	background-color:  	#FAF0E6;
 }
 .main-wrap {
 	width: 1000px;
@@ -62,11 +63,13 @@ body {
 
 .dialog {
 	width: 400px;
-	height: 250px;
+	height: 280px;
 	margin: 50vh auto 0;
 	transform: translateY(-80%);
-	border: 1px solid #676767;
+	border: 1px solid #013564;
 	position: relative;
+	background-color:  	#FFFFFF;
+	
 }
 .login-head {
 	width: 400px;
@@ -76,7 +79,7 @@ body {
 	font-size: 14px;
 	border-radius: 6px 6px 0 0;
 	text-indent: 20px;
-	background-color: #505050;
+	background-color: #013564;
 }
 #login {
 	width: 360px;
@@ -96,6 +99,7 @@ body {
 	display: inline-block;
 	text-align: right;
 	line-height: 30px;
+	color:#013564;
 }
 #login p input {
 	width: 268px;
@@ -103,6 +107,9 @@ body {
 	border: 1px solid #676767;
 	text-indent: 10px;
 	float: right;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 .mt30 {
 	margin-top: 30px;
@@ -116,8 +123,8 @@ body {
 	text-indent: 10px;
 }
 #submit-btn {
-	width: 268px;
-	height: 28px;
+	width: 270px;
+	height: 30px;
 	font-size: 18px;
 	border: 1px solid transform;
 	text-align: center;
@@ -155,6 +162,7 @@ body {
 }
 .bottom a:hover {
 	text-decoration: underline;
+	color:green;
 }
 
 
@@ -166,7 +174,7 @@ body {
 	background-color: #013564;
 }
 .footer-wrap {
-	width: 1000px;
+	width:100%;
 	margin: auto;
 	padding-top: 20px;
 	text-align: center;

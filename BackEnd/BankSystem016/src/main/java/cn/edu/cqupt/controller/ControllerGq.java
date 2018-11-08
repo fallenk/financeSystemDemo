@@ -29,9 +29,7 @@ import cn.edu.cqupt.model.Userinfo;
 import cn.edu.cqupt.service.ServiceGq;
 
 /**
- * 张冠群专用controller 此类用于处理前台请求以及返回结果
- *
- * @author ZhangGuanQun
+ * 此类用于处理前台请求以及返回结果
  *
  */
 @Controller
@@ -51,11 +49,53 @@ public class ControllerGq extends BaseController {
 	public void setServiceGq(ServiceGq serviceGq) {
 		this.serviceGq = serviceGq;
 	}
+	
+	/**
+	 * 跳转到 CST银行汇票兑换信息页面(draft-exchange.html)
+	 * 
+	 * @return 汇票兑换界面名称
+	 */
+	@RequestMapping("DraftExchange")
+	public String DraftExchange() {
+
+		logger.info("进 CST银行兑换信息页面");
+		return "draft-exchange";
+	}
+	
+	
+	/**
+	 * 跳转到 CST银行汇票申请信息页面(draft-apply.html)
+	 * 
+	 * @return 汇票申请界面名称
+	 */
+	@RequestMapping("DraftApply")
+	public String DraftApply() {
+
+		logger.info("进 CST银行申请信息页面");
+		return "draft-apply";
+	}
+	
+	
+	/**
+	 * 跳转到 CST银行汇票介绍信息页面(draft-product.html)
+	 * 
+	 * @return 汇票介绍界面名称
+	 */
+	@RequestMapping("DraftProudct")
+	public String DraftProudct() {
+
+		logger.info("进 CST银行汇票介绍信息页面");
+		return "draft-product";
+	}
+	
+	
+	
+	
 
 	/* --------------- 员工端 贷款部分 --------------- */
 
 	/*
-	 * SE银行贷款审批发放业务：
+	 * CST银行贷款审批发放业务：
 	 * 
 	 * 1.查询用户的贷款信息：接收前端query请求(表单页面的姓名和身份证号)，调用Service逻辑处理；
 	 * 
@@ -76,15 +116,18 @@ public class ControllerGq extends BaseController {
 	 * 6.贷款归还业务说明录入(目前做成静态网页部分)；
 	 * 
 	 */
+	
+	
 
 	/**
-	 * 跳转到SE银行贷款审批信息页面(loan_approval.html)
+	 * 跳转到 CST银行贷款审批信息页面(loan_approval.html)
 	 * 
 	 * @return 审批信息页面名称
 	 */
 	@RequestMapping("loanApprovalQuery")
 	public String loanApprovalQuery() {
-		logger.info("进入SE银行贷款审批信息页面");
+
+		logger.info("进 CST银行贷款审批信息页面");
 		return "loan-approval";
 	}
 	
@@ -199,13 +242,13 @@ public class ControllerGq extends BaseController {
 	}
 
 	/**
-	 * 跳转到SE银行贷款审核页面(audit.html)
+	 * 跳转到银行贷款审核页面(audit.html)
 	 * 
 	 * @return 贷款审核页面名称
 	 */
 	@RequestMapping("loanApprovalindex")
 	public String loanApproval() {
-		logger.info("进入SE银行贷款审核页面");
+		logger.info("进入银行贷款审核页面");
 		return "audit";
 	}
 
@@ -324,7 +367,7 @@ public class ControllerGq extends BaseController {
 	/* --------------- 用户端 贷款部分 --------------- */
 
 	/**
-	 * SE银行贷款审批发放业务：
+	 * 银行贷款审批发放业务：
 	 * 
 	 * 1.用户贷款申请：进入用户贷款申请页面，下拉列表所有值由前端负责完成，
 	 * 用户输入贷款申请信息，并接收用户上传的文件，发回后端调用Service处理；
@@ -349,13 +392,13 @@ public class ControllerGq extends BaseController {
 	}
 
 	/**
-	 * 跳转到SE银行用户贷款申请页面(loaning-my.html)
+	 * 跳转到银行用户贷款申请页面(loaning-my.html)
 	 * 
 	 * @return 贷款审核页面名称
 	 */
 	@RequestMapping("loanApply")
 	public String loanApply() {
-		logger.info("进入SE银行用户贷款申请页面");
+		logger.info("进入银行用户贷款申请页面");
 		return "loaning-my";
 	}
 
@@ -414,14 +457,15 @@ public class ControllerGq extends BaseController {
 		}
 		return info;
 	}
+	
 	/**
-	 * 跳转到SE银行用户贷款进度查询页面(loaning-process.html)
+	 * 跳转到银行用户贷款进度查询页面(loaning-process.html)
 	 * 
 	 * @return 贷款审核页面名称
 	 */
 	@RequestMapping("loanApplySchedule")
 	public String loanApplySchedule() {
-		logger.info("进入SE银行用户贷款进度查询页面");
+		logger.info("进入CST银行用户贷款进度查询页面");
 		return "loaning-process";
 	}
 
@@ -484,13 +528,13 @@ public class ControllerGq extends BaseController {
 	}
 
 	/**
-	 * 跳转到SE银行用户贷款利率表查看页面(loaning-rate.html)
+	 * 跳转到银行用户贷款利率表查看页面(loaning-rate.html)
 	 * 
 	 * @return 贷款审核页面名称
 	 */
 	@RequestMapping("loanInterestTable")
 	public String loanInterestTable() {
-		logger.info("进入SE银行用户贷款利率表查看页面");
+		logger.info("进入CST银行用户贷款利率表查看页面");
 		return "loaning-rate";
 	}
 

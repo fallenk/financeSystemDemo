@@ -12,7 +12,7 @@ a {
   text-decoration: none;
 }
 
-/* Í·²¿ */
+/* Í·ï¿½ï¿½ */
 .header {
   width: 100%;
   min-width: 1050px;
@@ -25,7 +25,7 @@ a {
   margin: 0 auto;
 }
 
-/* Í·²¿×ó±ß */
+/* Í·ï¿½ï¿½ï¿½ï¿½ï¿½ */
 .head-left {
   width: 450px;
   height: 75px;
@@ -44,7 +44,7 @@ h1.logo-h1 {
   height: 75px;
 }
 
-/* Í·²¿ÓÒ±ß */
+/* Í·ï¿½ï¿½ï¿½Ò±ï¿½ */
 .head-right {
   width: 450px;
   height: 75px;
@@ -94,14 +94,14 @@ h1.logo-h1 {
   border-radius: 4px;
 }
 
-/* ÄÚÈÝ²¿·Ö */
+/* ï¿½ï¿½ï¿½Ý²ï¿½ï¿½ï¿½ */
 .main {
   width: 100%;
 }
 .container {
   width: 780px;
   margin: 20px auto;
-  border: 1px solid #000;
+  border: 1px solid #0080ff;
 }
 .container .title {
   font-size: 26px;
@@ -109,9 +109,10 @@ h1.logo-h1 {
   line-height: 50px;
   text-align: center;
   font-weight: bold;
+  color:#0080ff;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #0080ff;
 }
 .box {
   min-height: 110px;
@@ -155,7 +156,7 @@ p.detail {
   background-color: #f2f2f2;
 }
 
-/* Î²²¿ */
+/* Î²ï¿½ï¿½ */
 .footer {
   width: 100%;
   min-width: 1050px;

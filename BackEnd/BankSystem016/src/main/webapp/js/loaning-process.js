@@ -1,5 +1,5 @@
 $(function(){
-	alert("kkkkk");
+	//alert("kkkkk");
 	$.ajax({
 		type: "get",
 		url: "/BankSystem_16/loanScheduleQuery.do",

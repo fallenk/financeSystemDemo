@@ -58,8 +58,9 @@ h1.logo-h1 {
 	/*height: 600px;*/
 	padding: 0 0 20px 0;
 	margin: 40px auto;
-	border: 1px solid #111;
+	border: 1px solid #013564;
 	border-radius: 5px;
+	background-color:  	#FFFFFF;
 }
 h2.account-title {
 	margin: 0;
@@ -69,7 +70,7 @@ h2.account-title {
 	height: 45px;
 	line-height: 45px;
 	font-size: 22px;
-	color: #000;
+	color: #013564;
 }
 .account-form {
 	margin: 0 auto;
@@ -88,6 +89,7 @@ h2.account-title {
 	height: 30px;
 	text-align: right;
 	line-height: 30px;
+	color: #013564;
 }
 .account-input {
 	margin: 0;
@@ -95,7 +97,11 @@ h2.account-title {
 	text-indent: 10px;
 	width: 200px;
 	height: 30px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
+
 .file {
 	margin: 20px 0 0 0;
 	padding: 0;
