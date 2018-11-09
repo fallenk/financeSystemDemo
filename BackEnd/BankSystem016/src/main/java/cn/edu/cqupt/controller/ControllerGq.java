@@ -29,7 +29,9 @@ import cn.edu.cqupt.model.Userinfo;
 import cn.edu.cqupt.service.ServiceGq;
 
 /**
- * 此类用于处理前台请求以及返回结果
+ * 张冠群专用controller 此类用于处理前台请求以及返回结果
+ *
+ * @author ZhangGuanQun
  *
  */
 @Controller
@@ -49,53 +51,11 @@ public class ControllerGq extends BaseController {
 	public void setServiceGq(ServiceGq serviceGq) {
 		this.serviceGq = serviceGq;
 	}
-	
-	/**
-	 * 跳转到 CST银行汇票兑换信息页面(draft-exchange.html)
-	 * 
-	 * @return 汇票兑换界面名称
-	 */
-	@RequestMapping("DraftExchange")
-	public String DraftExchange() {
-
-		logger.info("进 CST银行兑换信息页面");
-		return "draft-exchange";
-	}
-	
-	
-	/**
-	 * 跳转到 CST银行汇票申请信息页面(draft-apply.html)
-	 * 
-	 * @return 汇票申请界面名称
-	 */
-	@RequestMapping("DraftApply")
-	public String DraftApply() {
-
-		logger.info("进 CST银行申请信息页面");
-		return "draft-apply";
-	}
-	
-	
-	/**
-	 * 跳转到 CST银行汇票介绍信息页面(draft-product.html)
-	 * 
-	 * @return 汇票介绍界面名称
-	 */
-	@RequestMapping("DraftProudct")
-	public String DraftProudct() {
-
-		logger.info("进 CST银行汇票介绍信息页面");
-		return "draft-product";
-	}
-	
-	
-	
-	
 
 	/* --------------- 员工端 贷款部分 --------------- */
 
 	/*
-	 * CST银行贷款审批发放业务：
+	 * 银行贷款审批发放业务：
 	 * 
 	 * 1.查询用户的贷款信息：接收前端query请求(表单页面的姓名和身份证号)，调用Service逻辑处理；
 	 * 
@@ -116,18 +76,15 @@ public class ControllerGq extends BaseController {
 	 * 6.贷款归还业务说明录入(目前做成静态网页部分)；
 	 * 
 	 */
-	
-	
 
 	/**
-	 * 跳转到 CST银行贷款审批信息页面(loan_approval.html)
+	 * 跳转到银行贷款审批信息页面(loan_approval.html)
 	 * 
 	 * @return 审批信息页面名称
 	 */
 	@RequestMapping("loanApprovalQuery")
 	public String loanApprovalQuery() {
-
-		logger.info("进 CST银行贷款审批信息页面");
+		logger.info("进入银行贷款审批信息页面");
 		return "loan-approval";
 	}
 	
@@ -465,65 +422,10 @@ public class ControllerGq extends BaseController {
 	 */
 	@RequestMapping("loanApplySchedule")
 	public String loanApplySchedule() {
-		logger.info("进入CST银行用户贷款进度查询页面");
+		logger.info("进入银行用户贷款进度查询页面");
 		return "loaning-process";
 	}
 
-	/**
-	 * 跳转到银行用户开户进度查询页面(account-process.html)
-	 * 
-	 * @return 开户审核页面名称
-	 */
-	@RequestMapping("user/accountApplySchedule")
-	public String accountApplySchedule() {
-		logger.info("进入CST银行用户开户进度查询页面");
-		return "account-process";
-	}
-	
-	/**
-	 * 用户开户进度查询模块
-	 * 
-	 * @param request
-	 *            HttpServlet请求
-	 * @return 查询结果
-	 */
-	//已测试，未交互
-	@ResponseBody
-	@RequestMapping(value = "accountScheduleQuery")
-	public LoanSchedule accountApplySchedule(HttpServletRequest request) {
-		LoanSchedule result = new LoanSchedule();
-		HttpSession session = request.getSession();
-		Loginuser user=(Loginuser) session.getAttribute("user");
-		Userinfo userinfo=(Userinfo) session.getAttribute("userinfo");
-		if (user!=null&&userinfo!=null){
-		Loan loan=serviceGq.selectLoanByIdnumber(userinfo.getIdnumber());
-		if (loan!=null){
-			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
-			String loantime=sdf.format(loan.getCreattime());
-			if (loan.getLoantype().equals("LA"))
-				loan.setLoantype("短期贷款");
-			else loan.setLoantype("中长期贷款");
-			if (loan.getStatus().equals("0")){
-				loan.setStatus("审核中");
-			}
-			else{ 
-				if (loan.getStatus().equals("1"))
-				loan.setStatus("审核通过");
-				else loan.setStatus("拒绝贷款");
-			}
-			result.setCreatTime(loantime);
-			result.setLoanType(loan.getLoantype());
-			result.setName(userinfo.getName());
-			result.setStatus(loan.getStatus());
-		}
-		}
-		else{
-			logger.info("用户信息不完善，不能获取贷款进度");
-		}
-		
-		return result;
-	}
-	
 	/**
 	 * 用户贷款进度查询模块
 	 * 
@@ -589,7 +491,7 @@ public class ControllerGq extends BaseController {
 	 */
 	@RequestMapping("loanInterestTable")
 	public String loanInterestTable() {
-		logger.info("进入CST银行用户贷款利率表查看页面");
+		logger.info("进入银行用户贷款利率表查看页面");
 		return "loaning-rate";
 	}
 

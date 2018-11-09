@@ -1,4 +1,4 @@
-﻿package cn.edu.cqupt.controller;
+package cn.edu.cqupt.controller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;
@@ -68,12 +68,6 @@ public class ControllerXx extends BaseController {
 		return "open-account";
 	}
 	
-	//进入到查看账号流水界面
-	@RequestMapping("user/accountOfWater")
-	public String toAccountOfWater(){
-		return "accountOfWater";
-	}
-	
 	//预约开户v，已测试，功能正常
 	@ResponseBody
 	@RequestMapping(value="index/user/register_rmb",method=RequestMethod.POST)
@@ -81,9 +75,9 @@ public class ControllerXx extends BaseController {
 									@RequestParam(value="password", required=false, defaultValue="null") String password,
 									@RequestParam(value="idnumber",required=false, defaultValue="null") String idnumber,
 						HttpServletRequest request) throws Exception{
-		System.out.println("name:"+name);
-		System.out.println("password:"+password);
-		System.out.println("idnumber:"+idnumber);
+		System.out.println("name>>>>>>"+name);
+		System.out.println("password>>>>>>>>>>"+password);
+		System.out.println("idnumber>>>>>>>>"+idnumber);
 		
 		ReturnInfo info = new ReturnInfo();
 		HttpSession session = request.getSession();
@@ -181,7 +175,7 @@ public class ControllerXx extends BaseController {
 		}
 		//如果接收到的是取钱指令则进行取钱操作
 		if ("withdraw".equals(oprea_type)) {
-			if (capital.compareTo(new BigDecimal("money"))==-1){
+			if (capital.compareTo(new BigDecimal(money))==-1){
 				//表明账户余额不足，不能进行取钱操作
 				info.setInfo("账户余额为:"+capital+",余额不足");
 				info.setStatus("0");
@@ -199,7 +193,7 @@ public class ControllerXx extends BaseController {
 		}
 		//如果接收到的是转账指令则进行转账操作
 		if ("transfer".equals(oprea_type)) {
-			if (capital.compareTo(new BigDecimal("money"))==-1){
+			if (capital.compareTo(new BigDecimal(money))==-1){
 				//账户余额不足
 				info.setInfo("账户余额为:"+capital+",余额不足");
 				info.setStatus("0");
