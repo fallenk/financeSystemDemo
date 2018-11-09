@@ -406,10 +406,12 @@ public class ControllerGq extends BaseController {
 				logger.info("提交信息模块：提交信息成功！");
 				info.setInfo("提交信息成功！");
 				info.setStatus("1");
+				info.setUrl("user_main");
 			} else {
 				logger.warn("提交信息模块：插入数据失败！");
 				info.setInfo("插入数据失败！");
 				info.setStatus("0");
+				info.setUrl("loaning-my");
 			}
 		}
 		return info;
