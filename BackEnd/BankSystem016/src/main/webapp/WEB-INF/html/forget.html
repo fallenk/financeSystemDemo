@@ -3,35 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <title>忘记密码</title>
+	<link rel="shortcut icon" href="/BankSystem_16/img/SE.ico">
+	<link rel="stylesheet" href="/BankSystem_16/css/normalize.css">
+	<link rel="stylesheet" type="text/css" href="/BankSystem_16/css/login.css">
+	<link rel="stylesheet" href="https://cdn.bootcss.com/bootstrap/4.0.0/css/bootstrap.min.css" 
+	integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" 
+	crossorigin="anonymous">
+	<style type="text/css">
+	#login{
+		width: 360px;
+		height: 200px;
+		position: relative;
+	}
+	</style>
 </head>
 <body>
-<h2 class="account-title">忘记密码</h2>
-			<form action="" class="account-form" method="post" id="account" enctype="multipart/form-data">
-				<p class="account-p">
-					<label for="loginname" class="account-label">
-						用户名:
-					</label>
-					<input type="text" name="loginname" class="account-input" placeholder="请输入用户名">
-				</p>
-				
-				<p class="account-p">
-					<label for="name" class="account-label">
-						姓名:
-					</label>
-					<input type="text" name="name" class="account-input" placeholder="姓名">
-				</p>
-				
-				<p class="account-p">
-					<label for="contact" class="account-label">
-						联系方式:
-					</label>
-					<input type="text" name="phone" class="account-input" placeholder="联系方式">
-				</p>
-	
-				<p class="account-p">
-					<input type="submit" id="subBtn" value="submit">
-					<input type="reset" id="reset" value="cancel">
-				</p>
-			</form>
+	<!-- header start -->
+	<div class="header">
+		<div class="header-wrap">
+			<h1>
+				<img src="/BankSystem_16/img/logo.png" alt="logo">
+			</h1>
+		</div>
+	</div>
+
+	<!-- main start -->
+	<div class="main bg-light">
+		<div class="main-wrap">
+			<!-- form parts -->
+			<div class="dialog bg-light">
+				<h3 class="login-head">忘记密码</h3>
+				<form action="#" id="login">
+					<!-- username -->
+					<p class="mt30">
+						<label for="username">
+							用户名:
+						</label>
+						<input type="text" placeholder="username" id="username">
+						<!-- 用户名信息反馈 -->
+						<span class="user-tip"></span>
+					</p>
+					<p class="mt30">
+						<label for="name">
+							姓名:
+						</label>
+						<input type="text" placeholder="name" id="name">
+						<!-- 用户名信息反馈 -->
+						<span class="user-tip"></span>
+					</p>
+					<!-- password -->
+					<p>
+						<label for="password">
+							手机号码:
+						</label>
+						<input type="password" placeholder="password" id="password">
+						<!-- 密码信息反馈 -->
+						<span class="pass-tip"></span>
+					</p>
+					<button id="submit-btn">提交</button>
+				</form>
+
 </body>
 </html>
