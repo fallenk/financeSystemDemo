@@ -5,6 +5,7 @@
 	<title>user_main</title>
 	<link rel="shortcut icon" href="/BankSystem_16/img/SE.ico">
 	<link rel="stylesheet" href="/BankSystem_16/css/user_main.css">
+	
 </head>
 <body>
 	<!-- 头部 -->
@@ -34,7 +35,8 @@
 					<!-- 这里是用户头像 -->
 					<div class="user-pic">
 						<a href="#" class="user-pic-a">
-							<img src="/BankSystem_16/img/user.jpg" alt="用户头像" class="user-pic-img">
+							<img onerror="/BankSystem_16/img/user.jpg" 
+							src="/BankSystem_16/img/head.jpg" class="user-pic-img">
 						</a>
 					</div>
 				</div>
@@ -323,6 +325,12 @@
 												预约开户
 											</a>
 										</li>
+										<!-- 开户进度查询，需要添加 -->
+										<li>
+											<a href="/BankSystem_16/user/accountApplySchedule.do">
+												开户进度查询
+											</a>
+										</li>
 										<li>
 											<a href="/BankSystem_16/user/toPositintroduce.do">
 												存款业务介绍
@@ -385,6 +393,12 @@
 										<li>
 											<a href="#">
 												银行卡产品介绍
+											</a>
+										</li>
+										<!-- 账号流水查询 -->
+										<li>
+											<a href="/BankSystem_16/user/accountOfWater.do">
+												账号流水查询
 											</a>
 										</li>
 									</ul>
@@ -506,7 +520,119 @@
 	</div>
 
 	<!-- banner部分 -->
-	<div class="banner"></div>
+	<div class="banner">
+		<!-- 左边的重要通告栏 -->
+		<div class="left">
+			<div class="">
+				<h2 style="color:blue;margin-left: 5px;line-height: 10px">重要通知</h2>
+				<hr style="color:blue">
+				<div id="info">
+					<ul>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+		<!-- 中间的轮播 -->
+		<div class="middle">
+			<div id="container">
+			    <div id="photo">
+			        <img src="/BankSystem_16/img/logo.png" />
+			        <img src="/BankSystem_16/img/logo.png" />
+			        <img src="/BankSystem_16/img/logo.png" />
+			    </div>
+			</div>
+		</div>
+		<!-- 右边的信息栏 -->
+		<div class="right">
+			<div class="">
+				<div id="info">
+					<ul>
+						<li>
+							<p>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<a href="#" style="font-size: 15px;line-height: 10px;float: right;">2018:09:11</a>
+							</p>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<p>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<a href="#" style="font-size: 15px;line-height: 10px;float: right;">2018:09:11</a>
+							</p>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<p>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<a href="#" style="font-size: 15px;line-height: 10px;float: right;">2018:09:11</a>
+							</p>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<p>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<a href="#" style="font-size: 15px;line-height: 10px;float: right;">2018:09:11</a>
+							</p>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+						<li>
+							<p>
+							<a href="#" style="font-size: 15px;line-height: 10px;">
+								秋季毕业生离校通知
+							</a>
+							<a href="#" style="font-size: 15px;line-height: 10px;float: right;">2018:09:11</a>
+							</p>
+							<hr size="1" noshade="noshade" style="border:1px #cccccc dotted;"/>
+						</li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</div>
 	<div class="main"></div>
 
 	<!-- footer start -->

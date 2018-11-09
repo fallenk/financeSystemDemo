@@ -68,6 +68,12 @@ public class ControllerXx extends BaseController {
 		return "open-account";
 	}
 	
+	//进入到查看账号流水界面
+	@RequestMapping("user/accountOfWater")
+	public String toAccountOfWater(){
+		return "accountOfWater";
+	}
+	
 	//预约开户v，已测试，功能正常
 	@ResponseBody
 	@RequestMapping(value="index/user/register_rmb",method=RequestMethod.POST)

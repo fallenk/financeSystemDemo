@@ -470,6 +470,61 @@ public class ControllerGq extends BaseController {
 	}
 
 	/**
+	 * 跳转到银行用户开户进度查询页面(account-process.html)
+	 * 
+	 * @return 开户审核页面名称
+	 */
+	@RequestMapping("user/accountApplySchedule")
+	public String accountApplySchedule() {
+		logger.info("进入CST银行用户开户进度查询页面");
+		return "account-process";
+	}
+	
+	/**
+	 * 用户开户进度查询模块
+	 * 
+	 * @param request
+	 *            HttpServlet请求
+	 * @return 查询结果
+	 */
+	//已测试，未交互
+	@ResponseBody
+	@RequestMapping(value = "accountScheduleQuery")
+	public LoanSchedule accountApplySchedule(HttpServletRequest request) {
+		LoanSchedule result = new LoanSchedule();
+		HttpSession session = request.getSession();
+		Loginuser user=(Loginuser) session.getAttribute("user");
+		Userinfo userinfo=(Userinfo) session.getAttribute("userinfo");
+		if (user!=null&&userinfo!=null){
+		Loan loan=serviceGq.selectLoanByIdnumber(userinfo.getIdnumber());
+		if (loan!=null){
+			SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+			String loantime=sdf.format(loan.getCreattime());
+			if (loan.getLoantype().equals("LA"))
+				loan.setLoantype("短期贷款");
+			else loan.setLoantype("中长期贷款");
+			if (loan.getStatus().equals("0")){
+				loan.setStatus("审核中");
+			}
+			else{ 
+				if (loan.getStatus().equals("1"))
+				loan.setStatus("审核通过");
+				else loan.setStatus("拒绝贷款");
+			}
+			result.setCreatTime(loantime);
+			result.setLoanType(loan.getLoantype());
+			result.setName(userinfo.getName());
+			result.setStatus(loan.getStatus());
+		}
+		}
+		else{
+			logger.info("用户信息不完善，不能获取贷款进度");
+		}
+		
+		return result;
+	}
+	
+	/**
 	 * 用户贷款进度查询模块
 	 * 
 	 * @param request
