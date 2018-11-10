@@ -3,7 +3,7 @@ $(function(){
 	$.ajax({
 		type: "get",
 		url: "/BankSystem_16/loanScheduleQuery.do",
-		dataType: "json",
+		
 		success: function(data){
 			var oData = data;
 			console.log(oData);

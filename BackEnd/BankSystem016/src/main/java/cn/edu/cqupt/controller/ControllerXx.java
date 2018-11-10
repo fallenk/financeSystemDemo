@@ -191,7 +191,7 @@ public class ControllerXx extends BaseController {
 		}
 		//如果接收到的是取钱指令则进行取钱操作
 		if ("withdraw".equals(oprea_type)) {
-			if (capital.compareTo(new BigDecimal("money"))==-1){
+			if (capital.compareTo(new BigDecimal(money))==-1){
 				//表明账户余额不足，不能进行取钱操作
 				info.setInfo("账户余额为:"+capital+",余额不足");
 				info.setStatus("0");
@@ -209,7 +209,7 @@ public class ControllerXx extends BaseController {
 		}
 		//如果接收到的是转账指令则进行转账操作
 		if ("transfer".equals(oprea_type)) {
-			if (capital.compareTo(new BigDecimal("money"))==-1){
+			if (capital.compareTo(new BigDecimal(money))==-1){
 				//账户余额不足
 				info.setInfo("账户余额为:"+capital+",余额不足");
 				info.setStatus("0");
@@ -218,6 +218,7 @@ public class ControllerXx extends BaseController {
 			Rmbbusiness oppRmbbusiness = serviceXx.get_Rmbbusiness(opp_raccountid);
 			//收款方余额
 			BigDecimal oppCapital = oppRmbbusiness.getCapital();
+			System.out.println(oppCapital);
 			//更新收款方和发款方信息
 			oppRmbbusiness.setEdittime(new Date());
 			oppRmbbusiness.setCapital(oppCapital.add(new BigDecimal(money)));

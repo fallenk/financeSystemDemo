@@ -217,7 +217,7 @@ public class HomeControllerCb extends BaseController{
 		    @RequestParam(value="phone",required=false,defaultValue="null")String phone,
 		    @RequestParam(value="email",required=false,defaultValue="null")String email,
 		    @RequestParam(value="sex",required=false,defaultValue="1")String sex,
-		    @RequestParam(value="file",required=false) MultipartFile file,
+		   
 		    HttpServletRequest request){
 		System.out.println(sex);
 		// @RequestParam(value="file",required=false) MultipartFile file,
@@ -258,7 +258,7 @@ public class HomeControllerCb extends BaseController{
 			userinfo.setUserid(userid);
 			//保存用户的头像，如果用户上传了的
 			//String upload="D://file_uploads";
-			if(file!=null){
+			/*if(file!=null){
 				ServletContext sc = request.getSession().getServletContext();
 				String dir = sc.getRealPath(upload);
 				//String dir=upload;
@@ -279,7 +279,7 @@ public class HomeControllerCb extends BaseController{
 					}
 					userinfo.setPhoto(upload+"/memberphotos/"+FileName);
 			}
-			
+			*/
 			//进行用户信息保存
 			res=homeService.saveuser(user,userinfo);
 			System.out.println("res="+res);

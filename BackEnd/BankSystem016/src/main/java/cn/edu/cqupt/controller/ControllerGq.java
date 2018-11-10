@@ -546,6 +546,7 @@ public class ControllerGq extends BaseController {
 	@ResponseBody
 	@RequestMapping(value = "loanScheduleQuery")
 	public LoanSchedule loanApplySchedule(HttpServletRequest request) {
+		System.out.println("qwery");
 		LoanSchedule result = new LoanSchedule();
 		HttpSession session = request.getSession();
 		/*
