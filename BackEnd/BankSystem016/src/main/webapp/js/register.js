@@ -22,9 +22,9 @@ $(function(){
 	    }       
 	}
 
-	oFile.onchange = function(){
+/*	oFile.onchange = function(){
 		getImage();
-	}
+	}*/
 	$('#subBtn').click(function(){
 		var data = new FormData($('#account')[0]);
 		$.ajax({

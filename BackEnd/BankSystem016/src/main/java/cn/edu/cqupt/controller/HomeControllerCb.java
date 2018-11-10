@@ -217,7 +217,7 @@ public class HomeControllerCb extends BaseController{
 		    @RequestParam(value="phone",required=false,defaultValue="null")String phone,
 		    @RequestParam(value="email",required=false,defaultValue="null")String email,
 		    @RequestParam(value="sex",required=false,defaultValue="1")String sex,
-		    @RequestParam(value="file",required=false) MultipartFile file,
+		    //@RequestParam(value="file",required=false) MultipartFile file,
 		    HttpServletRequest request){
 		System.out.println(sex);
 		// @RequestParam(value="file",required=false) MultipartFile file,
@@ -258,7 +258,7 @@ public class HomeControllerCb extends BaseController{
 			userinfo.setUserid(userid);
 			//保存用户的头像，如果用户上传了的
 			//String upload="D://file_uploads";
-			if(file!=null){
+			/*if(file!=null){
 				ServletContext sc = request.getSession().getServletContext();
 				String dir = sc.getRealPath(upload);
 				//String dir=upload;
@@ -278,7 +278,7 @@ public class HomeControllerCb extends BaseController{
 						logger.error("公司联系人头像上传异常", e);
 					}
 					userinfo.setPhoto(upload+"/memberphotos/"+FileName);
-			}
+			}*/
 			
 			//进行用户信息保存
 			res=homeService.saveuser(user,userinfo);
@@ -302,7 +302,7 @@ public class HomeControllerCb extends BaseController{
 	@ResponseBody
 	@RequestMapping("/admin/editloaninterest")
 	public ReturnInfo editloaninterest(
-			@RequestParam(value="time",defaultValue="2015-2016")String time,
+			@RequestParam(value="time",defaultValue="2018-11-10")String time,
 			@RequestParam(value="v1",defaultValue="null")String v1,
 			@RequestParam(value="v2",defaultValue="null")String v2,
 			@RequestParam(value="v3",defaultValue="null")String v3,
@@ -314,6 +314,11 @@ public class HomeControllerCb extends BaseController{
 			@RequestParam(value="v9",defaultValue="null")String v9,
 			@RequestParam(value="v10",defaultValue="null")String v10){
 		ReturnInfo  info=new ReturnInfo();
+		if(time.equals("null")){
+			info.setInfo("请选择正确的时间！");
+			info.setStatus("0");
+			return info;
+		}
 		if (v1.equals("null")||v2.equals("null")||v3.equals("null")||v4.equals("null")||v5.equals("null")||v6.equals("null")||
 				v7.equals("null")||v8.equals("null")||v9.equals("null")||v10.equals("null"))
 		{
