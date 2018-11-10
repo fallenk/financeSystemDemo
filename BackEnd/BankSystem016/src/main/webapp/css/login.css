@@ -34,7 +34,7 @@ body {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #680034;
 }
 .header-wrap {
 	width: 1000px;
@@ -51,10 +51,12 @@ body {
 }
 
 /* main */
+/**/
 .main {
 	width: 100%;
 	flex: 1;
-	background-color:  	#FAF0E6;
+	
+	background: url(/BankSystem_16/img/login_main.png);
 }
 .main-wrap {
 	width: 1000px;
@@ -66,7 +68,7 @@ body {
 	height: 280px;
 	margin: 50vh auto 0;
 	transform: translateY(-80%);
-	border: 1px solid #013564;
+	border: 1px solid #800040;
 	position: relative;
 	background-color:  	#FFFFFF;
 	
@@ -79,7 +81,7 @@ body {
 	font-size: 14px;
 	border-radius: 6px 6px 0 0;
 	text-indent: 20px;
-	background-color: #013564;
+	background-color: #800040;
 }
 #login {
 	width: 360px;
@@ -99,7 +101,7 @@ body {
 	display: inline-block;
 	text-align: right;
 	line-height: 30px;
-	color:#013564;
+	color:#800040;
 }
 #login p input {
 	width: 268px;
@@ -108,6 +110,7 @@ body {
 	text-indent: 10px;
 	float: right;
 	border:2px solid;
+	border-color:#800040;
 	border-radius:25px;
 	-moz-border-radius:25px;
 }
@@ -125,16 +128,16 @@ body {
 #submit-btn {
 	width: 270px;
 	height: 30px;
-	font-size: 18px;
+	font-size: 20px;
 	border: 1px solid transform;
 	text-align: center;
 	line-height: 24px;
-	background-color: #013564;
+	background-color: #800040;
 	float: right;
-	color: #fff;
+	color: #0080ff;
 }
 #submit-btn:hover {
-	background-color: green;
+	background-color: blue;
 }
 .submit-b {
 	font-weight: normal;
@@ -153,8 +156,8 @@ body {
 	height: 15px;
 	text-align: center;
 	line-height: 15px;
-	color: #225592;
-	padding: 0 15px 0 10px;
+	color: #800040;
+	padding: 0 15px 0 20px;
 	display: inline-block;
 }
 .bottom a:first-child {
@@ -162,7 +165,7 @@ body {
 }
 .bottom a:hover {
 	text-decoration: underline;
-	color:green;
+	color:blue;
 }
 
 
@@ -171,22 +174,22 @@ body {
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width:100%;
 	margin: auto;
-	padding-top: 20px;
+	padding-top: 0px;
 	text-align: center;
 }
 ul.text {
-	width: 404px;
+	width: 604px;
 	height: 15px;
 	display: inline-block;
 }
 ul.copyright {
 	width: 350px;
-	height: 15px;
+	height: 10px;
 	display: inline-block;
 }
 ul.text li,ul.copyright li {

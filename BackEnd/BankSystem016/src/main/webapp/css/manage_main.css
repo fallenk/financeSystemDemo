@@ -17,7 +17,7 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .head-wrap {
 	width: 1000px;
@@ -100,7 +100,7 @@ h1.logo-h1 {
 	height: 55px;
 }
 .nav-wrap {
-	width: 280px;
+	width: 560px;
 	height: 55px;
 	margin: 0 auto;
 }
@@ -123,17 +123,17 @@ ul.nav-ul {
 	height: 55px;
 	text-align: center;
 	line-height: 55px;
-	color: #23ac38;
+	color: #800040;
 	font-size: 14px;
 	transition: background 1s,color 1s;
 }
 .nav-active1 {
 	background: #23ac38;
-	color: #f2f2f2;
+	color: #800040;
 }
 .nav-a:hover {
-	background: #23ac38;
-	color: #f2f2f2;
+	background: #800040;
+	color: #800040;
 }
 /* inner-ul */
 .inner-ul {
@@ -185,7 +185,7 @@ ul.nav-ul {
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width: 1000px;

@@ -17,7 +17,7 @@ a {
   width: 100%;
   min-width: 1050px;
   height: 75px;
-  background-color: #013564;
+  background-color: #800040;
 }
 .head-wrap {
   width: 1000px;
@@ -114,7 +114,7 @@ h1.logo-h1 {
   color:#0080ff;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #0080ff;
+  border-bottom: 1px solid #400080;
 }
 .container table {
   margin: 20px auto;
@@ -155,17 +155,22 @@ h1.logo-h1 {
   left: calc(50% - 150px);
   top: -10px;
   transition: background-color 1s;
-}
-#subBtn:hover {
-  background-color: green;
+  border: 1px solid #800040;
+	border-radius: 5px;
+	color:#800040;
+	background: white;
 }
 
+#subBtn:hover {
+  background-color: #800040;
+  color:white;
+}
 /* 尾部 */
 .footer {
   width: 100%;
   min-width: 1050px;
   height: 100px;
-  background-color: #013564;
+  background-color: #800040;
 }
 .footer-wrap {
   width: 1000px;

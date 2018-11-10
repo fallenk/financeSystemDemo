@@ -1,6 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+<style type="text/css">
+table, td, th
+  {
+  border:1px solid ;
+  border-color:#800040;
+  }
+
+th
+  {
+  background-color:#800040;
+  border-color:#800040;
+  }
+</style>
 	<meta charset="UTF-8">
 	<title>loaning rate</title>
 	<link rel="stylesheet" href="/BankSystem_16/css/normalize.css">
@@ -42,44 +55,39 @@
 		</div>
 	</div>
 
-	<div class="main">
-		<div class="container">
-			<p class="title">CST银行贷款利率表</p>
+	<div class="main" style="padding-top: 50px;">
+		<div class="container" style="border-color:#800040;" >
+			<p class="title" style="border-color:#800040;color:#800040;"
+			>CST银行贷款利率表</p>
 			<table border="1">
-				<caption>人民币贷款基准利率表</caption>
+				<caption style="color:#800040;">人民币贷款基准利率表</caption>
 				<tbody>
+					
+					
+						<th>项目</th>
+						<th>年利率(%)</th>
+					
+
 					<tr>
-						<td>
-							<input type="date" id="date">
-						</td>
-						<td>
-							<span>当前时间</span>
-							<input type="date" value="2018-10-22">
-						</td>
+						<td>一年</td>
+						<td id="short-loan">6</td>
+					</tr>
+
+					<tr>
+						<td>两年</td>
+						<td id="long-loan1">6.1</td>
 					</tr>
 					<tr>
-						<td>项目</td>
-						<td>年利率(%)</td>
+						<td>三年</td>
+						<td id="long-loan1">6.2</td>
 					</tr>
 					<tr>
-						<td>一、短期贷款</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>一年之内(包含一年)</td>
-						<td id="short-loan">数据库查询的值</td>
-					</tr>
-					<tr>
-						<td>二、中长期贷款</td>
-						<td></td>
-					</tr>
-					<tr>
-						<td>一年至五年(含五年)</td>
-						<td id="long-loan1">数据库查询的值</td>
+						<td>五年</td>
+						<td id="long-loan1">6.4</td>
 					</tr>
 					<tr>
 						<td>五年以上</td>
-						<td id="long-loan2">数据库查询的值</td>
+						<td id="long-loan2">6.55</td>
 					</tr>
 				</tbody>
 			</table>
@@ -89,11 +97,18 @@
 	<!-- footer start -->
 	<div class="footer">
 		<div class="footer-wrap">
-			<ul class="text">
+			<ul class="text" style="padding-left: 100px;">
 				<li><a href="#">网站申明</a></li>
 				<li><a href="#">网站地图</a></li>
-				<li><a href="#" class="noborder">客服热线：98850</a></li>
-			</ul><br>
+				<li><a href="#">使用条款</a></li>
+				<li><a href="#" class="noborder">关于我们</a></li>
+			</ul>
+			<br>
+			<br>
+			<ul class="text">
+				<li><a href="#" class="noborder">服务热线：95566（大陆地区）；+86(区号)95566 （海外及港澳台地区） </a></li>
+			</ul>
+			<br>
 			<ul class="copyright" >
 				<li>
 					<a href="#">

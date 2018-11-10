@@ -17,7 +17,7 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .head-wrap {
 	width: 1000px;
@@ -104,9 +104,9 @@ h1.logo-h1 {
 
 .container {
 	width: 780px;
-	height: 400px;
-	margin: 30px auto;
-	border: 1px solid #0080ff;
+	height: 500px;
+	margin: 80px auto;
+	border: 2px solid #0080ff;
 	border-radius: 5px;
 	box-sizing: border-box;
 }
@@ -120,6 +120,7 @@ h2.title {
 	line-height: 45px;
 	font-size: 22px;
 	color: #0080ff;
+	padding-top: 10px;
 }
 
 .storage-form {
@@ -151,6 +152,7 @@ h2.title {
 	height: 30px;
 	text-align: right;
 	line-height: 30px;
+	color:#800040;
 }
 .storage-input {
 	margin: 0;
@@ -162,9 +164,24 @@ h2.title {
 	border:2px solid;
 	border-radius:25px;
 	-moz-border-radius:25px;
+	color:#800040;
 }
 #subBtn {
-	margin: 0 60px 0 95px;
+	margin-top:15px;
+	margin-left:130px;
+	margin-right:30px;
+	width:60px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	color:#800040;
+}
+#reset{
+	width:60px;
+	border:2px solid;
+	border-radius:25px;
+	-moz-border-radius:25px;
+	color:#800040;
 }
 
 
@@ -173,7 +190,7 @@ h2.title {
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width: 1000px;

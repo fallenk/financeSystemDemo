@@ -149,9 +149,19 @@ public class ControllerXx extends BaseController {
 	}
 	
 	//跳转到存钱、取钱、转账的界面
-	@RequestMapping("clerk/tomoney_changeindex")
-	public String tomoney_Changeindex(){
-		return "save-draw-transfer";
+	@RequestMapping("clerk/saveMoney")
+	public String saveMoney(){
+		return "save";
+	}
+	//跳转到存钱、取钱、转账的界面
+	@RequestMapping("clerk/getMoney")
+	public String getMoney(){
+		return "get";
+	}
+	//跳转到存钱、取钱、转账的界面
+	@RequestMapping("clerk/transferMoney")
+	public String transferMoney(){
+		return "transfer";
 	}
 	//存钱、取钱、转账
 	//已测试，交互正常

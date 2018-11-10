@@ -17,7 +17,7 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .head-wrap {
 	width: 1000px;
@@ -48,19 +48,21 @@ h1.logo-h1 {
 
 /* main */
 .main {
-	width: 100%;
-	/*height: 620px;*/
+	width:100%;
+	height: 620px;
 	position: relative;
+	background: url(/BankSystem_16/img/login_main.png);
 }
 
 .container {
-	width: 502px;
-	/*height: 600px;*/
+	width: 60%;
+	height: 600px;
 	padding: 0 0 20px 0;
 	margin: 40px auto;
-	border: 1px solid #013564;
+	border: 2px solid #800040;
 	border-radius: 5px;
-	background-color:  	#FFFFFF;
+	background: url(/BankSystem_16/img/register_main.png);
+	opacity: 0.7;	
 }
 h2.account-title {
 	margin: 0;
@@ -70,7 +72,7 @@ h2.account-title {
 	height: 45px;
 	line-height: 45px;
 	font-size: 22px;
-	color: #013564;
+	color: #800040;
 }
 .account-form {
 	margin: 0 auto;
@@ -89,7 +91,7 @@ h2.account-title {
 	height: 30px;
 	text-align: right;
 	line-height: 30px;
-	color: #013564;
+	color: #800040;
 }
 .account-input {
 	margin: 0;
@@ -98,6 +100,7 @@ h2.account-title {
 	width: 200px;
 	height: 30px;
 	border:2px solid;
+	border-color:#800040;
 	border-radius:25px;
 	-moz-border-radius:25px;
 }
@@ -131,16 +134,23 @@ input[type="radio"] {
 	margin: 0;
 	padding: 0;
 	vertical-align: middle;
+	
 }
 
 
 #subBtn {
 	margin: 0 60px 0 95px;
+	border-color:#800040;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 input[type="file"],
 input[type="submit"],
 input[type="reset"] {
 	cursor: pointer;
+	border-color:#800040;
+	border-radius:25px;
+	-moz-border-radius:25px;
 }
 
 /* 尾部 */
@@ -148,7 +158,7 @@ input[type="reset"] {
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width: 1000px;

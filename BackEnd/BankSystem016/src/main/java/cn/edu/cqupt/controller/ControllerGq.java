@@ -62,6 +62,17 @@ public class ControllerGq extends BaseController {
 		return "draft-exchange";
 	}
 	
+	/**
+	 * 跳转到 CST银行个人留学贷款(persoanlLoan.html)
+	 * 
+	 * @return 
+	 */
+	@RequestMapping("user/PersonalLoan")
+	public String goPersoanLoan() {
+
+		logger.info("进 CST银行个人留学贷款");
+		return "personalLoan";
+	}
 	
 	/**
 	 * 跳转到 CST银行汇票申请信息页面(draft-apply.html)

@@ -17,7 +17,7 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .head-wrap {
 	width: 1000px;
@@ -105,7 +105,7 @@ h1.logo-h1 {
 
 .container {
 	width: 960px;
-	height: 600px;
+	height: 700px;
 	/*position: absolute;*/
 	margin: 30px auto;
 	border: 1px solid #666;
@@ -120,7 +120,7 @@ h2.account-title {
 	height: 50px;
 	line-height: 50px;
 	font-size: 30px;
-	color: #000;
+	color: #800040;
 	border-bottom: 1px solid #666;
 }
 
@@ -138,11 +138,13 @@ thead, .thead-tr {
 }
 .thead-td {
 	width: 700px;
-	height: 30px;
+	height: 50px;
+	font-size: 30px;
 	text-align: center;
-	line-height: 30px;
+	/* line-height: 30px; */
 	font-size: 14px;
-	color: #111;
+	color: white;
+	background-color: #800040;
 }
 /* 表格内容 */
 tbody, .time {
@@ -187,6 +189,47 @@ tbody, .time {
 	height: 30px;
 	line-height: 30px;
 }
+.td-right {
+	
+}
+.td-right:focus {
+	/* background:red; */
+	 border:2px solid #800040;
+     outline: 0;
+}
+.setData1 {
+	background-color: white;
+}
+.setData2 {
+	background-color: white;
+}
+.setData2 {
+	background-color: white;
+}
+.setData3 {
+	background-color: white;
+}
+.setData4 {
+	background-color: white;
+}
+.setData5 {
+	background-color: white;
+}
+.setData6 {
+	background-color: white;
+}
+.setData7 {
+	background-color: white;
+}
+.setData8 {
+	background-color: white;
+}
+.setData9 {
+	background-color: white;
+}
+.setData10 {
+	background-color: white;
+}
 .align-left {
 	text-align: left;
 	text-indent: 10px;
@@ -212,7 +255,7 @@ tbody, .time {
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width: 1000px;
@@ -257,3 +300,34 @@ ul.text li a:hover,ul.copyright li a:hover {
 ul.text li a.noborder,ul.copyright li a.noborder {
 	border-right: 0px;
 }
+#subBtn{
+	border: 1px solid #800040;
+	border-radius: 5px;
+	color:#800040;
+	background: white;
+	
+}
+#subBtn:hover {
+  background-color: #800040;
+  color:white;
+  
+}
+input{
+		width:330px;
+                border: 2px solid #ffffff;
+                padding: 7px 0px;
+                border-radius: 3px;
+                padding-left:5px;
+                text-align:center;
+                -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+                -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+                -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+                transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s
+                }
+input:focus{
+                    border-color: #66afe9;
+                    outline: 0;
+                    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6);
+                    box-shadow: inset 0 1px 1px rgba(0,0,0,.075),0 0 8px rgba(102,175,233,.6)
+ }

@@ -41,44 +41,34 @@
 			</div>
 		</div>
 	</div>
-	<div class="container">
-		<p class="title">CST银行贷款利率管理</p>
+	<div class="container" style="border-color:#800040;">
+		<p class="title" style="color: #800040;">CST银行贷款利率管理</p>
 		<table border="1">
-			<caption>人民币贷款基准利率表</caption>
+			<caption style="color: #800040;">人民币贷款基准利率表</caption>
 			<tbody>
-				<tr>
-					<td>
-						<span>选择时间:</span>
-						<input type="date" id="date">
-					</td>
-					<td>
-						<span>当前时间:</span>
-						<span class="time-show">2016.12.01</span>
-					</td>
-				</tr>
 				<tr>
 					<td>项目</td>
 					<td>年利率(%)</td>
 				</tr>
+								<tr>
+					<td>一年</td>
+					<td contenteditable="true" id="short-loan">6</td>
+				</tr>
+				
 				<tr>
-					<td>一、短期贷款</td>
-					<td></td>
+					<td>两年</td>
+					<td contenteditable="true" id="long-loan1">6.1</td>
 				</tr>
 				<tr>
-					<td>一年之内(包含一年)</td>
-					<td contenteditable="true" id="short-loan">数据库查询的值（可修改）</td>
+					<td>三年</td>
+					<td contenteditable="true" id="long-loan2">6.2</td>
 				</tr>
-				<tr>
-					<td>二、中长期贷款</td>
-					<td></td>
-				</tr>
-				<tr>
-					<td>一年至五年(含五年)</td>
-					<td contenteditable="true" id="long-loan1">数据库查询的值（可修改）</td>
-				</tr>
-				<tr>
+			<tr>
+					<td>五年</td>
+					<td contenteditable="true" id="long-loan1">6.4</td>
+				</tr><tr>
 					<td>五年以上</td>
-					<td contenteditable="true" id="long-loan2">数据库查询的值（可修改）</td>
+					<td contenteditable="true" id="long-loan2">6.55</td>
 				</tr>
 			</tbody>
 		</table>

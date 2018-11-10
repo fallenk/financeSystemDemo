@@ -17,7 +17,7 @@ a {
 	width: 100%;
 	min-width: 1050px;
 	height: 75px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .head-wrap {
 	width: 1000px;
@@ -62,7 +62,7 @@ h1.logo-h1 {
 	height: 75px;
 	line-height: 20px;
 	text-align: center;
-	float: left;
+	float: right;
 }
 .username-a {
 	display: inline-block;
@@ -124,25 +124,25 @@ ul.nav-ul {
 	height: 55px;
 	text-align: center;
 	line-height: 55px;
-	color: #23ac38;
+	color: #800040;
 	font-size: 14px;
 	transition: background 1s,color 1s;
 }
 .nav-active1 {
-	background: #23ac38;
+	background: #800040;
 	color: #f2f2f2;
 }
 .nav-a:hover {
-	background: #23ac38;
+	background: #800040;
 	color: #f2f2f2;
 }
 /* inner-nav */
 .inner-nav {
 	display: none;
-	width: 550px;
+	width: 130px;
 	height: 0;
 	padding-left: 10px;
-	background-color: #013564;
+	background-color: #800040;
 	opacity:0.8;
 	z-index: auto;
 }
@@ -369,7 +369,7 @@ ul.li.a{
 	width: 100%;
 	min-width: 1050px;
 	height: 100px;
-	background-color: #013564;
+	background-color: #800040;
 }
 .footer-wrap {
 	width: 1000px;
@@ -378,7 +378,7 @@ ul.li.a{
 	text-align: center;
 }
 ul.text {
-	width: 404px;
+	width: 504px;
 	height: 15px;
 	display: inline-block;
 	margin: 0;

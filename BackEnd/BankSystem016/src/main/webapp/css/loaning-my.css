@@ -17,7 +17,7 @@ a {
   width: 100%;
   min-width: 1050px;
   height: 75px;
-  background-color: #013564;
+  background-color: #800040;
 }
 .head-wrap {
   width: 1000px;
@@ -98,11 +98,15 @@ h1.logo-h1 {
 .main {
   width: 100%;
   min-height: calc(100vh - 175px);
+ 
 }
 .container {
   width: 780px;
+  height:400px;
   margin: 20px auto;
-  border: 1px solid #0080ff;
+  border: 2px solid #800040;
+  
+  opacity: 0.8;
 }
 .container .title {
   font-size: 26px;
@@ -110,10 +114,10 @@ h1.logo-h1 {
   line-height: 50px;
   text-align: center;
   font-weight: bold;
-  color:#0080ff;
+  color:#800040;
   padding: 0;
   margin: 0;
-  border-bottom: 1px solid #0080ff;
+  border-bottom: 2px solid #800040;
 }
 .container form {
   width: 320px;
@@ -134,13 +138,18 @@ h1.logo-h1 {
   border:2px solid;
   border-radius:25px;
   -moz-border-radius:25px;
+  border-color: #800040;
 }
 input[type="file"] {
   border: 0;
 }
+#subBtn{
+	color:#000000;
+	background: #800040;
+}
 #subBtn:hover {
-  color: #fff;
-  border: 1px solid #000;
+  color:#ffffff;
+  border: 1px solid #ffffff;
 }
 
 /* 尾部 */
@@ -148,7 +157,7 @@ input[type="file"] {
   width: 100%;
   min-width: 1050px;
   height: 100px;
-  background-color: #013564;
+  background-color: #800040;
 }
 .footer-wrap {
   width: 1000px;
