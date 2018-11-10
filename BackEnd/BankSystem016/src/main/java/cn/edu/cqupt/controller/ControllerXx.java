@@ -1,4 +1,4 @@
-﻿package cn.edu.cqupt.controller;
+package cn.edu.cqupt.controller;
 
 import java.math.BigDecimal;
 import java.util.ArrayList;

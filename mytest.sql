@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 80012
 File Encoding         : 65001
 
-Date: 2018-11-01 14:02:01
+Date: 2018-11-09 20:29:40
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -117,10 +117,10 @@ CREATE TABLE `interesttable` (
 -- ----------------------------
 DROP TABLE IF EXISTS `loan`;
 CREATE TABLE `loan` (
-  `loanId` int(11) NOT NULL,
+  `loanId` int(11) NOT NULL AUTO_INCREMENT,
   `IDnumber` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `loanType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `proveFile` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `proveFile` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `capital` decimal(10,0) DEFAULT NULL,
   `status` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `creatTime` timestamp NULL DEFAULT NULL,
@@ -128,11 +128,20 @@ CREATE TABLE `loan` (
   `editTime` timestamp NULL DEFAULT NULL,
   `comment` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   PRIMARY KEY (`loanId`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
+) ENGINE=InnoDB AUTO_INCREMENT=10 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of loan
 -- ----------------------------
+INSERT INTO `loan` VALUES ('1', '123456789123456789', '', null, null, null, null, null, null, null);
+INSERT INTO `loan` VALUES ('2', '123456789123456789', 'A', '/upload_files/proveFile/e1535315de6141dea8238fd5570a1bf9.docx', '100', '0', '2018-11-09 10:22:15', '18771446817763060403', '2018-11-09 10:22:15', null);
+INSERT INTO `loan` VALUES ('3', '123456789123456789', 'A', '/upload_files/proveFile/0109201961ad4520950b7c7d67f43eda.docx', '100', '0', '2018-11-09 10:55:13', '18771446817763060403', '2018-11-09 10:55:13', null);
+INSERT INTO `loan` VALUES ('4', '123456789123456789', 'A', '/upload_files/proveFile/70b7d2d7537f4ff6b4026d6daffe6937.docx', '100', '0', '2018-11-09 11:01:10', '18771446817763060403', '2018-11-09 11:01:10', null);
+INSERT INTO `loan` VALUES ('5', '123456789123456789', 'A', '/upload_files/proveFile/6ac7433e270f4bdb87c796ad30c932d3.docx', '100', '0', '2018-11-09 11:02:38', '18771446817763060403', '2018-11-09 11:02:38', null);
+INSERT INTO `loan` VALUES ('6', '123456789123456789', 'A', '/upload_files/proveFile/73375d3be1354004b0b91a4e183502d6.docx', '100', '0', '2018-11-09 11:06:02', '18771446817763060403', '2018-11-09 11:06:02', null);
+INSERT INTO `loan` VALUES ('7', '123456789123456789', 'A', '/upload_files/proveFile/73375d3be1354004b0b91a4e183502d6.docx', '100', '0', '2018-11-09 11:06:43', '18771446817763060403', '2018-11-09 11:06:43', null);
+INSERT INTO `loan` VALUES ('8', '123456789123456789', 'A', '/upload_files/proveFile/86739eabf2f44b44a284e8b14365849b.docx', '100', '0', '2018-11-09 11:11:56', '52646370386030542125', '2018-11-09 11:11:56', null);
+INSERT INTO `loan` VALUES ('9', '123456789123456789', 'A', '/upload_files/proveFile/28baa901699f40908746cbb349f2a1d4.docx', '100', '0', '2018-11-09 11:19:32', '52646370386030542125', '2018-11-09 11:19:32', null);
 
 -- ----------------------------
 -- Table structure for loanapprovalinfo
@@ -180,14 +189,18 @@ CREATE TABLE `loginuser` (
   `creatTime` timestamp NULL DEFAULT NULL,
   `editTime` timestamp NULL DEFAULT NULL,
   `userType` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `userid` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
+  `userid` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`userid`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
 
 -- ----------------------------
 -- Records of loginuser
 -- ----------------------------
-INSERT INTO `loginuser` VALUES ('123', '123456', '1', '2018-11-01 10:21:14', '2018-11-01 10:21:17', 'U', '123');
+INSERT INTO `loginuser` VALUES ('123', '123456', '1', '2018-11-01 00:00:00', '2018-11-01 00:00:00', 'U', '123');
+INSERT INTO `loginuser` VALUES ('1234', '123456', null, null, null, null, '1234');
+INSERT INTO `loginuser` VALUES ('124', '123456', '1', '2018-11-06 00:00:00', '2018-11-06 00:00:00', 'A', '124');
+INSERT INTO `loginuser` VALUES ('125', '123456', '1', '2018-11-06 00:00:00', '2018-11-06 00:00:00', 'D', '125');
+INSERT INTO `loginuser` VALUES ('test', '123456', '1', '2018-11-09 00:00:00', '2018-11-09 00:00:00', 'U', '1e2d86bec1b548e3a4e9ffdca88dbdca');
 
 -- ----------------------------
 -- Table structure for loginuserinfo
@@ -265,6 +278,8 @@ CREATE TABLE `rmbbusiness` (
 -- ----------------------------
 -- Records of rmbbusiness
 -- ----------------------------
+INSERT INTO `rmbbusiness` VALUES ('123456789123456789', '123456', 'R', '20', null, '0', '2018-11-09 04:12:10', '2018-11-09 04:13:24', '18771446817763060403');
+INSERT INTO `rmbbusiness` VALUES ('123456789123456789', '123456', 'R', '30', null, '0', '2018-11-09 04:04:43', '2018-11-09 04:13:24', '52646370386030542125');
 
 -- ----------------------------
 -- Table structure for userinfo
@@ -273,13 +288,13 @@ DROP TABLE IF EXISTS `userinfo`;
 CREATE TABLE `userinfo` (
   `name` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `sex` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `address` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `phone` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `email` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
-  `photo` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `address` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `phone` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `email` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `photo` varchar(80) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `creatTime` timestamp NULL DEFAULT NULL,
   `editTime` timestamp NULL DEFAULT NULL,
-  `userid` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
+  `userid` varchar(32) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci DEFAULT NULL,
   `IDnumber` varchar(20) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   PRIMARY KEY (`IDnumber`) USING BTREE
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci ROW_FORMAT=DYNAMIC;
@@ -288,3 +303,6 @@ CREATE TABLE `userinfo` (
 -- Records of userinfo
 -- ----------------------------
 INSERT INTO `userinfo` VALUES ('张三', '男', '宁波市浙江大学', '17321510824', '402561078@qq.com', null, null, null, '123', '111');
+INSERT INTO `userinfo` VALUES ('admin1', '男', '测试', '12345678912', '1212@163.com', null, null, null, '124', '112');
+INSERT INTO `userinfo` VALUES ('员工1', '女', '测试', '12345678912', '1231@163.com', null, null, null, '125', '113');
+INSERT INTO `userinfo` VALUES ('sjc', '1', '浙江大学', '17321510824', '402561078@qq.com', '/upload_files/memberphotos/99e67ea6f4a14e8783cb13eb4585c11c.jpg', '2018-11-09 03:46:47', '2018-11-09 03:46:47', '1e2d86bec1b548e3a4e9ffdca88dbdca', '123456789123456789');

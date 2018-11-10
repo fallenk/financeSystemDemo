@@ -3,6 +3,7 @@ package cn.edu.cqupt.controller;
 import java.io.File;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.sql.Timestamp;
 import java.text.Normalizer.Form;
 import java.util.ArrayList;
 import java.util.Date;
@@ -101,14 +102,13 @@ public class HomeControllerCb extends BaseController{
 		return "manage_main";
 	}
 	
-	//处理登录
 	@ResponseBody
 	@RequestMapping(value="index/login",method=RequestMethod.POST)
 	public ReturnInfo login(@RequestParam(value = "username", required = false, defaultValue = "null") String username,
 			@RequestParam(value = "password", required = false, defaultValue = "null") String password,
 			HttpServletRequest request){
-		System.out.println("username："+username);
-		System.out.println("password："+password);
+		System.out.println("username>>>>>>"+username);
+		System.out.println("password>>>>>>>>>>"+password);
 	ReturnInfo info=new ReturnInfo();
 	int change=0;
 	if ("null".equals(username)||"null".equals(password)){
@@ -119,26 +119,22 @@ public class HomeControllerCb extends BaseController{
 	else {
 		HashMap<String, Object> loginuser = null;
 		try {
-			//查询登录用户的信息
+
 			loginuser=homeService.selectLoginuser(username,password);
 			System.out.println("loginuser=");
 			Loginuser user=null;
 			Userinfo uinfo=null;
 			if(loginuser!=null){
-				//获取用户的具体信息
 				user=(Loginuser) loginuser.get("loginuser");
 				uinfo=(Userinfo) loginuser.get("userinfo");
 				
 			}
-			//跳转到管理员界面
 			if (user.getUsertype().equals("A")){
 				info.setUrl("/BankSystem_16/index/admin.do");
 			}
-			//跳转到普通用户界面
 			if (user.getUsertype().equals("U")){
 				info.setUrl("/BankSystem_16/index/user.do");
 			}
-			//跳转到收营员界面
 			if (user.getUsertype().equals("D")){
 				info.setUrl("/BankSystem_16/index/clerk.do");
 			}
@@ -241,7 +237,8 @@ public class HomeControllerCb extends BaseController{
 			//用户填写的关键信息正确，给予注册
 			Loginuser user=new Loginuser();
 			Userinfo userinfo=new Userinfo();
-			Date crtime=new Date();
+			//Date crtime=new Date();
+			Timestamp crtime = new Timestamp(System.currentTimeMillis()); 
 			user.setCreattime(crtime);
 			user.setEdittime(crtime);
 			user.setLoginname(loginname);
