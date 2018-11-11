@@ -14,12 +14,14 @@ import org.springframework.stereotype.Service;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.edu.cqupt.core.UUIDFactory;
+import cn.edu.cqupt.dao.DraftInfoMapper;
 import cn.edu.cqupt.dao.DraftMapper;
 import cn.edu.cqupt.dao.InteresttableMapper;
 import cn.edu.cqupt.dao.LoanApprovalInfoMapper;
 import cn.edu.cqupt.dao.LoanMapper;
 import cn.edu.cqupt.dao.LoanScheduleMapper;
 import cn.edu.cqupt.model.Draft;
+import cn.edu.cqupt.model.DraftInfo;
 import cn.edu.cqupt.model.Interesttable;
 import cn.edu.cqupt.model.Loan;
 import cn.edu.cqupt.model.LoanApprovalInfo;
@@ -38,6 +40,17 @@ public class ServiceGqImpl implements ServiceGq {
 
 	public void setLoanApprovalInfoMapper(LoanApprovalInfoMapper loanApprovalInfoMapper) {
 		this.loanApprovalInfoMapper = loanApprovalInfoMapper;
+	}
+	
+	@Resource
+	private DraftInfoMapper draftInfoMapper;
+
+	public DraftInfoMapper getDraftInfoMapper() {
+		return draftInfoMapper;
+	}
+
+	public void setDraftInfoMapper(DraftInfoMapper loanApprovalInfoMapper) {
+		this.draftInfoMapper = draftInfoMapper;
 	}
 	
 	@Resource
@@ -412,12 +425,12 @@ public class ServiceGqImpl implements ServiceGq {
 	}
 	
 	@Override
-	public List<Draft> getDraftResultByName(String userName, String numPerPage, String pageNo){
+	public List<DraftInfo> getDraftResultByName(String userName, String numPerPage, String pageNo){
 		HashMap<String, String> hm = new HashMap<String, String>();
 		hm.put("userName", userName.trim());
-		List<Draft> result = null;
-		result = draftMapper.getDraftInfByUserName(hm);
-		for (Draft e:result){
+		List<DraftInfo> result = null;
+		result = draftInfoMapper.getDraftInfByUserName(hm);
+		for (DraftInfo e:result){
 			if (e.getStatus().equals("0")){
 				e.setStatus("待审核");
 				continue;
@@ -431,13 +444,13 @@ public class ServiceGqImpl implements ServiceGq {
 	}
 	
 	@Override
-	public List<Draft> getDraftResultByid(String idNumber, String numPerPage, String pageNo) {
+	public List<DraftInfo> getDraftResultByid(String idNumber, String numPerPage, String pageNo) {
 		// TODO Auto-generated method stub
 		HashMap<String, String> hm = new HashMap<String, String>();
 		hm.put("idNumber", idNumber.trim());
-		List<Draft> result = null;
-		result = draftMapper.getDraftInfByidNumber(hm);
-		for (Draft e:result){
+		List<DraftInfo> result = null;
+		result = draftInfoMapper.getDraftInfByidNumber(hm);
+		for (DraftInfo e:result){
 			if (e.getStatus().equals("0")){
 				e.setStatus("待审核");
 				//continue;
@@ -451,14 +464,14 @@ public class ServiceGqImpl implements ServiceGq {
 	}
 	
 	@Override
-	public List<Draft> getDraftResultByNameAndid(String userName, String idNumber, String numPerPage, String pageNo){
+	public List<DraftInfo> getDraftResultByNameAndid(String userName, String idNumber, String numPerPage, String pageNo){
 		HashMap<String, String> hm = new HashMap<String, String>();
 		hm.put("userName", userName.trim());
 		hm.put("idNumber", idNumber.trim());
 
-		List<Draft> result = null;
-		result = draftMapper.getDraftInfByNameAndid(hm);
-		for (Draft e:result){
+		List<DraftInfo> result = null;
+		result = draftInfoMapper.getDraftInfByNameAndid(hm);
+		for (DraftInfo e:result){
 			if (e.getStatus().equals("0")){
 				e.setStatus("未审核");
 				//continue;
@@ -472,16 +485,16 @@ public class ServiceGqImpl implements ServiceGq {
 	}
 	
 	@Override
-	public List<Draft> getDraftResultByNull(String numPerPage, String pageNo){
+	public List<DraftInfo> getDraftResultByNull(String numPerPage, String pageNo){
 		HashMap<String, Integer> hm = new HashMap<String, Integer>();
 		int current=Integer.parseInt(pageNo);
 		int size=Integer.parseInt(numPerPage);
 		current=(current-1)*size;
 		hm.put("numPerPage", current);
 		hm.put("pageNo", current+size);
-		List<Draft> result = null;
-		result = draftMapper.getDraftInfByNull(hm);
-		for (Draft e:result){
+		List<DraftInfo> result = null;
+		result = draftInfoMapper.getDraftInfByNull(hm);
+		for (DraftInfo e:result){
 			if (e.getStatus().equals("0")){
 				e.setStatus("未审核");
 				break;

@@ -20,6 +20,7 @@ import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.edu.cqupt.model.Draft;
+import cn.edu.cqupt.model.DraftInfo;
 import cn.edu.cqupt.model.Interesttable;
 import cn.edu.cqupt.model.Loan;
 import cn.edu.cqupt.model.LoanApprovalInfo;
@@ -240,7 +241,7 @@ public class ControllerGq extends BaseController {
 		logger.info("UserName>>>>>>>>" + userName);
 		logger.info("IDNumber>>>>>>>>" + idNumber);
 
-		List<Draft> result = null;
+		List<DraftInfo> result = null;
 
 		if ("null".equals(numPerPage) || "null".equals(pageNo)) {
 			logger.error("信息查询模块：分页信息接收错误！");

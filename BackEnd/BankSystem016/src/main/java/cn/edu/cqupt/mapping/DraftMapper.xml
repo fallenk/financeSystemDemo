@@ -76,29 +76,6 @@
   SELECT COUNT(*) FROM draft
   </select>
   
-    <!-- 需要分页的部分 -->
-  <select id="getDraftInfByUserName" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
-    SELECT u.name,l.IDnumber,l.capital,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.name=#{userName,jdbcType=VARCHAR} and l.status!='4'
-  </select>
-
-  <select id="getDraftInfByidNumber" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
-    select u.name,l.IDnumber,l.capital,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.IDnumber=#{idNumber,jdbcType=VARCHAR} and l.status!='4'
-  </select>
-
-  <select id="getDraftInfByNameAndid" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
-    select u.name,l.IDnumber,l.capital,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.name=#{userName,jdbcType=VARCHAR} and l.idNumber=#{idNumber,jdbcType=VARCHAR} and l.status!='4'
-  </select>
-
-  <select id="getDraftInfByNull" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
-    select u.name,l.IDnumber,l.capital,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and l.status!='4' limit #{numPerPage,jdbcType=INTEGER} , #{pageNo,jdbcType=INTEGER}
-  </select>
-  
-  <!-- 非分页部分 -->
-  <select id="getDraftInfByidNumberSingle" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
-    select u.name,l.loanType,l.proveFile,l.capital,l.cardID,l.IDnumber,l.status from userinfo u,loan l where u.IDnumber = l.IDnumber and l.status!='4' and l.idNumber=#{idNumber,jdbcType=VARCHAR}
-  </select>
-  
-  
   <select id="selectByExample" parameterType="cn.edu.cqupt.model.DraftExample" resultMap="BaseResultMap">
     select
     <if test="distinct">

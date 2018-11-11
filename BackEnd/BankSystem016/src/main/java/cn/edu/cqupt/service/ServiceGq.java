@@ -7,17 +7,13 @@ import javax.servlet.http.HttpServletRequest;
 import org.springframework.web.multipart.MultipartFile;
 
 import cn.edu.cqupt.model.Draft;
+import cn.edu.cqupt.model.DraftInfo;
 import cn.edu.cqupt.model.Interesttable;
 import cn.edu.cqupt.model.Loan;
 import cn.edu.cqupt.model.LoanApprovalInfo;
 import cn.edu.cqupt.model.LoanSchedule;
 
-/**
- * 张冠群专用service 业务逻辑接口
- * 
- * @author ZhangGuanQun
- *
- */
+
 public interface ServiceGq {
 	/**
 	 * 根据姓名查询贷款信息(包含字段：name(userinfo表),IDNumber,capital,cardID,status)
@@ -86,13 +82,13 @@ public interface ServiceGq {
 	/**
 	 * 查询汇票
 	 */
-	List<Draft> getDraftResultByName(String useName, String numPerPage, String pageNo);
+	List<DraftInfo> getDraftResultByName(String useName, String numPerPage, String pageNo);
 
-	List<Draft> getDraftResultByid(String idNumber, String numPerPage, String pageNo);
+	List<DraftInfo> getDraftResultByid(String idNumber, String numPerPage, String pageNo);
 
-	List<Draft> getDraftResultByNameAndid(String userName, String idNumber, String numPerPage, String pageNo);
+	List<DraftInfo> getDraftResultByNameAndid(String userName, String idNumber, String numPerPage, String pageNo);
 
-	List<Draft> getDraftResultByNull(String numPerPage, String pageNo);
+	List<DraftInfo> getDraftResultByNull(String numPerPage, String pageNo);
 	
 
 	/**

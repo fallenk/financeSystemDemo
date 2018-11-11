@@ -1,13 +1,24 @@
 package cn.edu.cqupt.controller;
-
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.IOException;
 import java.sql.Timestamp;
+import java.text.Normalizer.Form;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import javax.annotation.Resource;
+import javax.lang.model.element.Element;
+import javax.servlet.ServletContext;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import javax.validation.constraints.Null;
+import javax.xml.registry.infomodel.User;
+
+import org.omg.CORBA.PUBLIC_MEMBER;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
@@ -18,13 +29,23 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import org.springframework.web.multipart.MultipartFile;
+
+import com.sun.org.apache.bcel.internal.generic.ReturnaddressType;
+
 import cn.edu.cqupt.core.UUIDFactory;
+import cn.edu.cqupt.model.FormInterests;
 import cn.edu.cqupt.model.Interesttable;
+import cn.edu.cqupt.model.Loan;
+
 import cn.edu.cqupt.model.LoginUserInfo;
 import cn.edu.cqupt.model.Loginuser;
 import cn.edu.cqupt.model.ReturnInfo;
 import cn.edu.cqupt.model.Userinfo;
 import cn.edu.cqupt.service.HomeService;
+
+import sun.misc.BASE64Decoder;
+
 
 @Controller
 public class HomeControllerCb extends BaseController{
@@ -102,7 +123,6 @@ public class HomeControllerCb extends BaseController{
 	else {
 		HashMap<String, Object> loginuser = null;
 		try {
-
 			loginuser=homeService.selectLoginuser(username,password);
 			System.out.println("loginuser=");
 			Loginuser user=null;
@@ -427,4 +447,3 @@ public class HomeControllerCb extends BaseController{
 		
 	}
 }
-
