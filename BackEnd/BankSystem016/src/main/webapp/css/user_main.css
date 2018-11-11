@@ -311,7 +311,7 @@ li.width140 {
 	width:20%;
 	height:300px;
 	float:left;
-	margin:0 2%;
+	margin:0 1%;
 }
 .middle{
 	width:42%;
@@ -321,10 +321,10 @@ li.width140 {
 }
 .right{
 	background:#ffffff;
-	width:30%;
+	width:34%;
 	height:300px;
 	float:left;
-	margin:0 2%;
+	margin:0;
 }
 /*重要通知*/
 ul.li.a{
@@ -332,13 +332,13 @@ ul.li.a{
 }
 /*轮播*/
 #container {
-	width: 560px;
+	width: 570px;
 	height: 300px;
 	overflow: hidden;
 }
  
 #photo {
-	width: 1200px;
+	width: 1710px;
 	animation: switch 5s ease-out infinite;
 }
  
@@ -350,13 +350,13 @@ ul.li.a{
  
 @keyframes switch {
 	0%, 25% {
-		margin-left: 0;
+		margin-left: 0px;
 	}
 	35%, 60% {
-		margin-left: -560px;
+		margin-left: -570px;
 	}
 	70%, 100% {
-		margin-left: -1120px;
+		margin-left: -1140px;
 	}
 }
 /* main */
