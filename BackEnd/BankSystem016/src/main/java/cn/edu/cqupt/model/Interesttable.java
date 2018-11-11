@@ -1,5 +1,6 @@
 package cn.edu.cqupt.model;
 
+
 public class Interesttable {
 	private Integer interestid;
 
@@ -40,7 +41,7 @@ public class Interesttable {
     }
 
     public void setTime(String time) {
-        this.time = time == null ? null : time.trim();
+        this.time = time;
     }
 
     public Double getInterestvalue() {

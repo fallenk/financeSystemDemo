@@ -1,9 +1,9 @@
 $(function(){
 	//alert("kkkkk");
 	$.ajax({
-		type: "get",
+		type: "post",
 		url: "/BankSystem_16/loanScheduleQuery.do",
-		
+		dataType: "json",
 		success: function(data){
 			var oData = data;
 			console.log(oData);

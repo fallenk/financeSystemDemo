@@ -22,7 +22,8 @@ $(function(){
 	    }       
 	}
 
-	/*oFile.onchange = function(){
+
+/*	oFile.onchange = function(){
 		getImage();
 	}*/
 	$('#subBtn').click(function(){
