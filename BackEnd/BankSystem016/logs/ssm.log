@@ -20,3 +20,11 @@
 [INFO] [2018-11-01 13:07:28][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybaits.xml]
 [INFO] [2018-11-01 13:07:28][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
 [INFO] [2018-11-01 13:07:28][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-11-11 12:13:18][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f4a7090: startup date [Sun Nov 11 12:13:18 CST 2018]; root of context hierarchy
+[INFO] [2018-11-11 12:13:18][org.springframework.context.support.ClassPathXmlApplicationContext]Refreshing org.springframework.context.support.ClassPathXmlApplicationContext@4f4a7090: startup date [Sun Nov 11 12:13:18 CST 2018]; root of context hierarchy
+[INFO] [2018-11-11 12:13:19][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybaits.xml]
+[INFO] [2018-11-11 12:13:19][org.springframework.beans.factory.xml.XmlBeanDefinitionReader]Loading XML bean definitions from class path resource [spring-mybaits.xml]
+[INFO] [2018-11-11 12:13:21][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-11-11 12:13:21][org.springframework.beans.factory.config.PropertyPlaceholderConfigurer]Loading properties file from class path resource [jdbc.properties]
+[INFO] [2018-11-11 12:13:21][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
+[INFO] [2018-11-11 12:13:21][org.springframework.beans.factory.annotation.AutowiredAnnotationBeanPostProcessor]JSR-330 'javax.inject.Inject' annotation found and supported for autowiring
