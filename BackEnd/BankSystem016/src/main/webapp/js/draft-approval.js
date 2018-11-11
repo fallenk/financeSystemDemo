@@ -59,10 +59,13 @@ $(function(){
 									+item.idNumber+
 							'	</td>' +
 							'	<td class="td150">'
-									+item.cardID+
+									+item.checkId+
 							'	</td>' +
 							'	<td class="td150">'
 									+item.capital+
+							'	</td>' +
+							'	<td class="td150">'
+									+item.endDate+
 							'	</td>' +
 							'	<td class="td150">' +
 							'		<a href="#" id="audit-a" class="audit-state">'

@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="cn.edu.cqupt.dao.DraftInfoMapper" >
+ <resultMap id="BaseResultMap" type="cn.edu.cqupt.model.DraftInfo" >
+    <result column="name" property="name" jdbcType="VARCHAR" />
+    <result column="IDnumber" property="idNumber" jdbcType="INTEGER" />
+    <result column="checkID" property="checkId" jdbcType="INTEGER" />
+    <result column="captial" property="captial" jdbcType="DECIMAL" />
+    <result column="endDate" property="endDate" jdbcType="TIMESTAMP" />
+    <result column="status" property="status" jdbcType="VARCHAR" />
+  </resultMap>
+
+    <!-- 需要分页的部分 -->
+  <select id="getDraftInfByUserName" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    SELECT u.name,l.IDnumber,l.checkID,l.capital,l.endDate,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.name=#{userName,jdbcType=VARCHAR} and l.status!='4'
+  </select>
+
+  <select id="getDraftInfByidNumber" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select u.name,l.IDnumber,l.checkID,l.capital,l.endDate,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.IDnumber=#{idNumber,jdbcType=VARCHAR} and l.status!='4'
+  </select>
+
+  <select id="getDraftInfByNameAndid" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select u.name,l.IDnumber,l.checkID,l.capital,l.endDate,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and u.name=#{userName,jdbcType=VARCHAR} and l.idNumber=#{idNumber,jdbcType=VARCHAR} and l.status!='4'
+  </select>
+
+  <select id="getDraftInfByNull" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select u.name,l.IDnumber,l.checkID,l.capital,l.endDate,l.status from userinfo u,draft l where u.IDnumber = l.IDnumber and l.status!='4' limit #{numPerPage,jdbcType=INTEGER} , #{pageNo,jdbcType=INTEGER}
+  </select>
+  
+  <!-- 非分页部分 -->
+  <select id="getDraftInfByidNumberSingle" resultMap="BaseResultMap" parameterType="java.util.HashMap" >
+    select u.name,l.loanType,l.proveFile,l.capital,l.cardID,l.IDnumber,l.status from userinfo u,loan l where u.IDnumber = l.IDnumber and l.status!='4' and l.idNumber=#{idNumber,jdbcType=VARCHAR}
+  </select>
+
+ </mapper>
+  

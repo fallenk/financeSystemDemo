@@ -3,6 +3,10 @@ package cn.edu.cqupt.model;
 import java.math.BigDecimal;
 import java.util.Date;
 
+/**
+ * @author yydcl
+ *
+ */
 public class DraftInfo {
 
 	private String name;
@@ -19,13 +23,20 @@ public class DraftInfo {
 	
 	private Date endDate;
 	
-
-	public String getProveFile() {
-		return proveFile;
+	public String getCheckId() {
+		return checkId;
 	}
 
-	public void setProveFile(String proveFile) {
-		this.proveFile = proveFile;
+	public void setCheckId(String checkId) {
+		this.checkId = checkId;
+	}
+
+	public Date getEndDate() {
+		return endDate;
+	}
+
+	public void setEndDate(Date endDate) {
+		this.endDate = endDate;
 	}
 
 	public String getName() {
@@ -44,13 +55,6 @@ public class DraftInfo {
 		this.idNumber = idNumber == null ? null : idNumber.trim();
 	}
 	
-	public String getLoanType() {
-		return loanType;
-	}
-
-	public void setLoanType(String loanType) {
-		this.loanType = loanType == null ? null : loanType.trim();
-	}
 	public BigDecimal getCapital() {
 		return capital;
 	}
@@ -77,7 +81,7 @@ public class DraftInfo {
 	
 	@Override
 	public String toString() {
-		return "LoanApprovalInfo [name=" + name + ", idNumber=" + idNumber + ", loanType=" + loanType + ", capital="
+		return "LoanApprovalInfo [name=" + name + ", idNumber=" + idNumber +  ", capital="
 				+ capital + ", cardID=" + cardID + ", status=" + status + "]";
 	}
 }

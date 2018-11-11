@@ -33,15 +33,6 @@ public interface DraftMapper {
     
     int selectDraftNumbers();
     
-    
-	List<Draft> getDraftInfByUserName(HashMap<String, String> hm);
 
-	List<Draft> getDraftInfByidNumber(HashMap<String, String> hm);
-
-	List<Draft> getDraftInfByNameAndid(HashMap<String, String> hm);
-
-	List<Draft> getDraftInfByNull(HashMap<String, Integer> hm);
-
-	List<Draft> getDraftInfByidNumberSingle(String idNumber);
     
 }
