@@ -32,7 +32,7 @@ $(function(){
 
 		// 包装请求后台页面内容ajax的函数
 		function askDataAjax(sendData) {
-			let url = "/BankSystem_16/loanApprovalQuery.do";
+			let url = "/BankSystem_16/loanInfQuery.do";
 			// 默认发送get请求
 			var myPromise = fetch(url).then( (response)=>{
 				return response.json();
@@ -56,7 +56,7 @@ $(function(){
 									+item.name+
 							'	</td>' +
 							'	<td class="td150">'
-									+item.idNumber+
+									+item.idnumber+
 							'	</td>' +
 							'	<td class="td150">'
 									+item.capital+

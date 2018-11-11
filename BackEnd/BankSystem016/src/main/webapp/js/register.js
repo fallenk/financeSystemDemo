@@ -22,6 +22,7 @@ $(function(){
 	    }       
 	}
 
+
 /*	oFile.onchange = function(){
 		getImage();
 	}*/

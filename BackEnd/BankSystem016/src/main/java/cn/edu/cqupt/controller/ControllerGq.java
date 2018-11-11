@@ -19,6 +19,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.multipart.MultipartFile;
 
+import cn.edu.cqupt.model.Draft;
 import cn.edu.cqupt.model.Interesttable;
 import cn.edu.cqupt.model.Loan;
 import cn.edu.cqupt.model.LoanApprovalInfo;
@@ -174,7 +175,7 @@ public class ControllerGq extends BaseController {
 	 */
 	//已测试，未交互
 	@ResponseBody
-	@RequestMapping(value = "loanApprovalQuery", method = RequestMethod.POST)
+	@RequestMapping(value = "loanInfQuery", method = RequestMethod.GET)
 	public HashMap<String, Object> loanInfQuery(
 			@RequestParam(value = "name", required = false, defaultValue = "null") String userName,
 			@RequestParam(value = "idnumber", required = false, defaultValue = "null") String idNumber,
@@ -213,6 +214,57 @@ public class ControllerGq extends BaseController {
 			} else {
 				/* 全不空，调用根据userName和idNumber查询的方法 */
 				result = serviceGq.getLoanResultByNameAndid(userName, idNumber, numPerPage, pageNo);
+			}
+		}
+		HashMap<String, Object>res=new HashMap<String, Object>();
+		res.put("datas", result);
+		res.put("pagenum", pagenum);
+		return res;
+	}
+	
+	/**
+	 *  汇票查询
+	 */
+	@ResponseBody
+	@RequestMapping(value = "draftInfQuery", method = RequestMethod.GET)
+	public HashMap<String, Object> draftInfQuery(
+			@RequestParam(value = "name", required = false, defaultValue = "null") String userName,
+			@RequestParam(value = "idnumber", required = false, defaultValue = "null") String idNumber,
+			@RequestParam(value = "current", required = false, defaultValue = "1") String pageNo,
+			HttpServletRequest request) {
+		String numPerPage="10";
+		int pagenum=1;//那些查询的值只有一页数据
+		/**
+		 * 根据前端传过来的username和IDNumber来进行数据查找，查找结果以对象的形式发回（前端以JSON形式接收）
+		 */
+		logger.info("UserName>>>>>>>>" + userName);
+		logger.info("IDNumber>>>>>>>>" + idNumber);
+
+		List<Draft> result = null;
+
+		if ("null".equals(numPerPage) || "null".equals(pageNo)) {
+			logger.error("信息查询模块：分页信息接收错误！");
+		} else {
+			if ("null".equals(userName) && "null".equals(idNumber)) {
+				//已测试，功能正常
+				/* 全空：调用查询全部数据的方法(刚进入页面或者空查询,注意分页号) */
+				//查询数据总条数
+				int counts=serviceGq.selectDraftNumbers();
+				int pages=(int) Math.ceil((double)counts/(10.00));
+				pagenum=pages;
+				int page=Integer.parseInt(pageNo);
+				if (page>pages)
+					page=pages;
+				result = serviceGq.getDraftResultByNull(numPerPage, pageNo);
+			} else if ("null".equals(userName) && !("null".equals(idNumber))) {
+				/* userName空,idNumber不空：调用根据idNumber查询的方法 */
+				result = serviceGq.getDraftResultByid(idNumber, numPerPage, pageNo);
+			} else if ("null".equals(idNumber) && !("null".equals(userName))) {
+				/* idNumber空,userName不空：调用根据userName查询的方法 */
+				result = serviceGq.getDraftResultByName(userName, numPerPage, pageNo);
+			} else {
+				/* 全不空，调用根据userName和idNumber查询的方法 */
+				result = serviceGq.getDraftResultByNameAndid(userName, idNumber, numPerPage, pageNo);
 			}
 		}
 		HashMap<String, Object>res=new HashMap<String, Object>();
@@ -546,6 +598,7 @@ public class ControllerGq extends BaseController {
 	@ResponseBody
 	@RequestMapping(value = "loanScheduleQuery")
 	public LoanSchedule loanApplySchedule(HttpServletRequest request) {
+		System.out.println("qwery");
 		LoanSchedule result = new LoanSchedule();
 		HttpSession session = request.getSession();
 		/*

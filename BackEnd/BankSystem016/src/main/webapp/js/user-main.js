@@ -4,7 +4,7 @@ $(function(){
 			type: "get",
 			url: "/BankSystem_16/index/getuserinfo.do",
 			success: function(data){
-				$(".user-pic-img")[0].src = "/BankSystem_16/"+data.photo;
+				//$(".user-pic-img")[0].src = "/BankSystem_16/"+data.photo;
 				$(".username-a").html(data.name);
 			}
 		})

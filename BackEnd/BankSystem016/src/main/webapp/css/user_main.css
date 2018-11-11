@@ -102,7 +102,7 @@ h1.logo-h1 {
 }
 .nav-wrap {
 	width: 560px;
-	height: 55px;
+	height: 155px;
 	margin: 0 auto;
 }
 ul.nav-ul {
@@ -140,7 +140,7 @@ ul.nav-ul {
 .inner-nav {
 	display: none;
 	width: 130px;
-	height: 0;
+	height: 20px;
 	padding-left: 10px;
 	background-color: #800040;
 	opacity:0.8;
@@ -165,12 +165,13 @@ h2.title {
 	height: 30px;
 	line-height: 30px;
 	color: #ffffff;
-	font-size: 14px;
+	font-size: 10px;
 	margin: 0;
 	padding: 0;
 }
 .items {
 	width: 550px;
+	
 }
 
 /* 缁�2锛�3涓猲av涓嬮潰鐨勪簩绾у鑸缃叕鐢ㄧ殑鏍峰紡 */
@@ -192,6 +193,7 @@ h2.title {
 }
 .inner-nav ul li a {
 	color: #ffffff;
+	font-size: 10px;
 }
 .inner-nav ul li ul {
 	margin: -30px 0 0 93px;
@@ -309,7 +311,7 @@ li.width140 {
 	width:20%;
 	height:300px;
 	float:left;
-	margin:0 2%;
+	margin:0 1%;
 }
 .middle{
 	width:42%;
@@ -319,10 +321,10 @@ li.width140 {
 }
 .right{
 	background:#ffffff;
-	width:30%;
+	width:34%;
 	height:300px;
 	float:left;
-	margin:0 2%;
+	margin:0;
 }
 /*重要通知*/
 ul.li.a{
@@ -330,13 +332,13 @@ ul.li.a{
 }
 /*轮播*/
 #container {
-	width: 560px;
+	width: 570px;
 	height: 300px;
 	overflow: hidden;
 }
  
 #photo {
-	width: 1200px;
+	width: 1710px;
 	animation: switch 5s ease-out infinite;
 }
  
@@ -348,13 +350,13 @@ ul.li.a{
  
 @keyframes switch {
 	0%, 25% {
-		margin-left: 0;
+		margin-left: 0px;
 	}
 	35%, 60% {
-		margin-left: -560px;
+		margin-left: -570px;
 	}
 	70%, 100% {
-		margin-left: -1120px;
+		margin-left: -1140px;
 	}
 }
 /* main */

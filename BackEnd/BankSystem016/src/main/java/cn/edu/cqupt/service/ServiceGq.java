@@ -6,6 +6,7 @@ import javax.servlet.http.HttpServletRequest;
 
 import org.springframework.web.multipart.MultipartFile;
 
+import cn.edu.cqupt.model.Draft;
 import cn.edu.cqupt.model.Interesttable;
 import cn.edu.cqupt.model.Loan;
 import cn.edu.cqupt.model.LoanApprovalInfo;
@@ -80,6 +81,19 @@ public interface ServiceGq {
 	 * @return 查询结果
 	 */
 	List<LoanApprovalInfo> getLoanResultByNull(String numPerPage, String pageNo);
+	
+	
+	/**
+	 * 查询汇票
+	 */
+	List<Draft> getDraftResultByName(String useName, String numPerPage, String pageNo);
+
+	List<Draft> getDraftResultByid(String idNumber, String numPerPage, String pageNo);
+
+	List<Draft> getDraftResultByNameAndid(String userName, String idNumber, String numPerPage, String pageNo);
+
+	List<Draft> getDraftResultByNull(String numPerPage, String pageNo);
+	
 
 	/**
 	 * 删除贷款信息(IDNumber做主键,Status=4)
@@ -151,5 +165,7 @@ public interface ServiceGq {
 
 	int selectLoanNumbers();
 
+	int selectDraftNumbers();
+	
 	int updateLoan(Loan loan);
 }
